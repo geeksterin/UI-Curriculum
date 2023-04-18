@@ -1,3 +1,5 @@
+## day 03
+
 #### Git is a popular version control system that enables developers to collaborate on projects effectively. It has a wide range of functionalities, including the ability to create branches, view commit history, remove and move assets, and clone or fork repositories. In this note, we'll discuss each of these features in detail.
 
 ### Introducing Branches and Their Usage

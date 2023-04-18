@@ -1,29 +1,4 @@
-- [What is CSS?](#what-is-css)
-- [Syntax of CSS](#syntax-of-css)
-    - [Selector](#selector)
-    - [Declaration](#declaration)
-    - [Properties](#properties)
-    - [Property Value](#property-value)
-- [Different types of selectors](#different-types-of-selectors)
-    - [Element Selector](#element-selector)
-    - [Id Selector](#id-selector)
-    - [Class Selector](#class-selector)
-- [Some Best practices to use css selectors](#some-best-practices-to-use-css-selectors)
-- [Applying CSS to HTML](#applying-css-to-html)
-    - [External StyleSheet](#external-stylesheet)
-    - [Internal StyleSheet](#internal-stylesheet)
-        - [NOTE](#note)
-    - [Inline Styles](#inline-styles)
-        - [NOTE](#note-1)
-- [CSS colors](#css-colors)
-    - [rgb() function in CSS](#rgb-function-in-css)
-    - [RGBA Colors](#rgba-colors)
-    - [CSS HEX Colors](#css-hex-colors)
-- [Few CSS properties](#few-css-properties)
-    - [color](#color)
-    - [Syntax](#syntax)
-    - [background-color](#background-color)
-    - [Syntax](#syntax-1)
+# Day 10
 
 # What is CSS?
 Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:
@@ -36,7 +11,7 @@ p {
 
 # Syntax of CSS 
 
-![Syntax](./Images/css-declaration-small.png)
+![Syntax](../Images/css-declaration-small.png)
 
 The whole structure is called a ruleset. (The term ruleset is often referred to as just rule.) Note the names of the individual parts:
 
