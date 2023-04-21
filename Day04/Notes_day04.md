@@ -6,6 +6,8 @@
 
 Figma is a cloud-based design tool that allows users to create user interface (UI) designs, user experience (UX) designs, wireframes, prototypes, and graphics for websites, mobile applications, and other digital products. It was developed by Figma Inc. and released in 2016. Figma enables real-time collaboration and sharing of design files, allowing multiple designers to work together on the same project simultaneously. It also includes features such as version history, design components, and a powerful prototyping tool. Figma has gained popularity among designers due to its ease of use, flexibility, and collaborative features, making it a popular choice for both individual designers and design teams.
 
+![figma](../Images/figma.jpg)
+
 Figma that cover various aspects related to design, UI/UX, and the process of building a website:
 
 #### Why do we need Design?
