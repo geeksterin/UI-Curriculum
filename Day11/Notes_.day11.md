@@ -114,3 +114,5 @@ background-color: #1fef;      /* Fully opaque shorthand  */
 background-color: rgb(255, 255, 128);        /* Fully opaque */
 background-color: rgba(117, 190, 218, 0.5);  /* 50% transparent */
 ```
+# Class Assignment
+- https://priyanshu-240499.github.io/Assignments-CSS/background/background.html
