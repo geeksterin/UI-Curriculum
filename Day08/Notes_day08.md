@@ -1,226 +1,346 @@
-## Day 03 HTML
+# Day 02 HTML
+# The `<form>` Element
 
-## HTML Tables 
-HTML tables are used to display data in rows and columns on a web page. They are created using the ``<table>`` element and its associated elements, such as ``<tr>`` for table rows and ``<td>`` for table data cells.
+All forms start with a ``<form>`` element, like this:
 
-Here is an example of a basic HTML table structure:
 ```html
-<table>
-  <tr>
-    <td>Row 1, Column 1</td>
-    <td>Row 1, Column 2</td>
-  </tr>
-  <tr>
-    <td>Row 2, Column 1</td>
-    <td>Row 2, Column 2</td>
-  </tr>
-</table>
+<form action="/my-handling-form-page" method="post">
+
+</form>
 ```
-In this example, we have a table with two rows and two columns. The <tr> element defines each row, and the <td> element defines each cell in the row.
+This element formally defines a form. It's a container element like a ``<section>`` or ``<footer>`` element, but specifically for containing forms; it also supports some specific attributes to configure the way the form behaves. All of its attributes are optional, but it's standard practice to always set at least the action and method attributes:
 
-You can also use the <th> element to define header cells for each column, like this:
+1. The ``action`` attribute defines the location (URL) where the form's collected data should be sent when it is submitted.
+2. The ``method`` attribute defines which HTTP method to send the data with (usually get or post).
+
+# Form elements
+These are the following HTML ``<form>`` elements:
+
+1. ``<label>``: It defines label for ``<form>`` elements.
+
+2. ``<input>``: It is used to get input data from the form in various types such as text, password, email, etc by changing its type.
+3. ``<button>``: It defines a clickable button to control other elements or execute a functionality.
+4. ``<select>``: It is used to create a drop-down list.
+5. ``<textarea>``: It is used to get input long text content.
+6. ``<fieldset>``: It is used to draw a box around other form elements and group the related data.
+7. ``<option>``: It is used to define options in a drop-down list.
+
+# Textbox in HTML Form
+In an HTML form, we use the ``<input>`` tag by assigning type attribute value to text to input single line input. To define type attribute see the below syntax. 
+
+Tip: The default value of the type attribute is “text”.
+
 ```html
-<table>
-  <tr>
-    <th>Column 1 Header</th>
-    <th>Column 2 Header</th>
-  </tr>
-  <tr>
-    <td>Row 1, Column 1</td>
-    <td>Row 1, Column 2</td>
-  </tr>
-  <tr>
-    <td>Row 2, Column 1</td>
-    <td>Row 2, Column 2</td>
-  </tr>
-</table>
+Syntax:
+
+<input type="text" />
 ```
-In this example, the first row contains header cells defined with the <th> element, which are typically displayed in bold and centered by default.
 
-HTML tables can also be styled using CSS, allowing you to control the appearance of the table, its cells, and its borders.
-
-
-![Tables](../Images/tables.gif)
-
-Code: 
+Or shorthand for “text” type:
 ```html
+<input />
+```
 
+# Password in an HTML Form
+We can change type value text to password to get the input password 
+
+Example:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h2>Lets Make a Login page</h2>
+<form>
+<p>
+	<label>Username : <input type="text" /></label>
+</p>
+<p>
+	<label>Password : <input type="password" /></label>
+</p>
+<p>
+	<button type="submit">Submit</button>
+</p>
+</form>
+</body>
+</html>
+```
+
+**Output:**
+
+![output](../Images/login.png)
+
+In the above example, we can see the difference between type text and type password. The username will be visible but the password will not be visible. 
+
+# Radio Button in an HTML Form
+To create a radio button, we use the ``<input>`` tag following by radio type to provide users to choose a limited number of choices.
+
+ Syntax:
+```html
+<input type="radio" name="radio_button_name" value="radio_button_value" />
+```
+
+**Note:** The radio button must have shared the same name to be treated as a group. 
+
+**Note:** The value attribute defines the unique value associated with each radio button. The value is not shown to the user, but is the value that is sent to the server on “submit” to identify which radio button that was selected.
+
+**Example:**
+
+In this example, we will create a radio button to choose your gender. 
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h2>Select your gender</h2>
+<form>
+	<label>Male<input type="radio" name="gender" value="male" /></label>
+	<label>Female<input type="radio" name="gender" value="female" /></label>
+</form>
+</body>
+</html>
+
+```
+
+
+**Output:**
+
+![select](../Images/radiobox.jpg)
+
+# Checkbox in an HTML Form
+To create a checkbox in an HTML form, we use the ``<input>`` tag followed by the input type checkbox. It is a square box to tick to activate this. It used to choose more options at a time. 
+
+Syntax:
+```html
+<input type="checkbox" name="select_box_name" value="select_box_value" />
+```
+
+**Note:** the “name” and “value” attributes are used to send the checkbox data to the server.
+
+**Example:**
+
+In this example, we use checkboxes to select language. 
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h2>Choose Language</h2>
+<form>
+	<ul style="list-style-type:none;">
+	<li><input type="checkbox" name="language" value="hindi" />Hindi</li>
+	<li><input type="checkbox" name="language" value="english" />English</li>
+	<li><input type="checkbox" name="language" value="sanskrite" />Sanskrit</li>
+	</ul>
+</form>
+</body>
+</html>
+```
+
+**Output:**
+
+![checkbox](../Images/checkbox.jpg)
+
+
+# Combobox in an HTML Form
+Combobox is used to create a drop-down menu in your form which contains multiple options. So, to create an Combobox in an HTML form, we use the ``<select>`` tag with ``<option>`` tag. It is also known as a drop-down menu. 
+
+Syntax:
+
+```html
+<select name="select_box_name">
+  <option value="value1">option1</option>
+  <option value="value2">option2</option>
+  <option value="value3">option3</option>
+</select>
+```
+
+**Note:** the “name” and “value” attributes are used to send the Combobox data to the server.
+
+**Example:**
+
+In this example, we will create a dropdown menu to select Nationality. 
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h2>Select Your Nationality</h2>
+<form>
+<select name="language">
+	<option value="indian">Indian</option>
+	<option value="nepali">Nepali</option>
+	<option value="others">Others</option>
+</select>
+</form>
+</body>
+</html>
+```
+
+**Output:**
+
+![combobox](../Images/combobox.jpg)
+
+# Submit button in an HTML Form
+In the HTML form, submit button is used to submit the details of the form to the form handler. A form handler is a file on the server with a script that is used to process input data.  
+
+Syntax:
+```html
+ <button type="submit">submit</button>
+ ```
+
+ ```html
  <!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="utf-8">
-            <meta name="description" content="">
-            <meta name="keywords" content="">
-            <title>Table Practice</title>
-        </head>
-        <body>
-            <table border="1" align="center" cellpadding="10px">
-                <thead>
-                    <tr>
-                        <th rowspan="3">Day</th>
-                        <th colspan="3">Seminar</th>
-                    </tr>
-                    <tr>
-                        <th colspan="2">Schedule</th>
-                        <th rowspan="2">Topic</th>
-                    </tr>
-                    <tr>
-                        <th>Begin</th>
-                        <th>End</th>
-                    </tr>
-                </thead>
-        
-                <tbody>
-                    <tr>
-                        <td rowspan="2">Monday</td>
-                        <td rowspan="2">8:00 a.m</td>
-                        <td rowspan="2">5:00 p.m</td>
-                        <td>Introduction to XML</td>
-                    </tr>
-                    <tr>
-                        <td>Validity: DTD and Relax NG</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="4">Tuesday</td>
-                        <td>8:00 a.m</td>
-                        <td>11:00 a.m</td>
-                        <td rowspan="2">XPath</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">11:00 a.m</td>
-                        <td rowspan="2">2:00 p.m</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">XSL transformation</td>
-                    </tr>
-                    <tr>
-                        <td>2:00 p.m</td>
-                        <td>5:00 p.m</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>8:00 a.m</td>
-                        <td>12:00 p.m</td>
-                        <td>XLS Formatting Objects</td>
-                    </tr>
-        
-                </tbody>
-            </table>
-        
-        </body>
-        </html>
-```        
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
 
-## iFrames
+<h2>Submit button Tut.</h2>
 
-Q. Ever wondered how we can add a interactive spotify playlist to our webpage?
+<form>
 
-In this lecture we will see how to add or embed a interactive spotify playlist on our webpage.
+<p>
+	<label>Username: <input type="text" /></label>
+<p>
+	<label>Password: <input type="password" /></label>
+</p>
+<p>
+	<button type="submit">submit</button>
+</p>
 
-**Final Result**
+</form>
+</body>
+</html>
+```
 
-![Spotify](../Images/spotify.png)
+**Output:**
 
-Now lets see how we did it !
+![submit](../Images/submit.png)
 
-We did it with the help of iframely domains,
 
-1. So Go to [https://iframely.com/domains](https://iframely.com/domains)
+# TextArea in an HTML Form
 
-2. you would be landed on this page:
+In the HTML form, a text area is used to add comments or reviews, or addresses to the form, in other words, the text area is a multi-line text input control. It contains an unlimited number of characters, the text renders in a fixed-width font, and the size of the text area is given by the ``<rows>`` and ``<cols>`` attributes. To create a text area in the form use the ``<textarea>`` tag.
 
-![landing](../Images/landing.png)
+Syntax:
+```html
+<textarea name="textarea_name">content</textarea>
+```
 
-3. Select Spotify media from the given option :
+**Note:** the name attribute is used to reference the textarea data after it is send to a server.
 
-![select](../Images/select.png)
+Example:
 
-4. Now you are able to see something like this.
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h2>TextArea Tutorial</h2>
+<form>
+	<textarea name="welcomeMessage" rows="3" cols="40">This is a text area</textarea>
+</form>
+</body>
+</html>
+```
 
-![landing](../Images/landing2.png)
+**Output:**
 
-5. so just copy paste the link of playlist you want in your website.
+![Textarea](../Images/Textarea.png)
 
-![paste](../Images/paste.png)
+# Create an HTML form to input the basic details of a student
+In this example, we will take input such as Salutation, First Name, Last Name, Email, Phone, Gender, Date of Birth, and Address. 
 
-6. Final step copy this code and paste in your html body to see the result
-
-![final](../Images/final.png)
-
-now, demo HTML Code
+To create this form, we need to use the ``<legend> ``tag to defined caption, ``<select>`` tag for Salutation, ``<option>`` tag to define elements of Salutation, ``<input>`` tag for First Name, Last Name, Email, Phone, Date of Birth by changing ``<input>`` tag type attribute, ``<textarea>`` to input address, radio button for gender. After defining all these stuffs, we will use a ``<button>`` to submit this form data. 
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form</title>
 </head>
 <body>
-    <!-- paste the copied code here -->
-    <div style="left: 0; width: 100%; height: 380px; position: relative;"><iframe src="https://open.spotify.com/embed/playlist/5ABHKGoOzxkaa28ttQV9sE?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div>
+<form>
+	<fieldset>
+	<legend>Personal Details</legend>
 
+<p>
+		<label>
+		Salutation
+		<br />
+		<select name="salutation">
+			<option>--None--</option>
+			<option>Mr.</option>
+			<option>Ms.</option>
+			<option>Mrs.</option>
+			<option>Dr.</option>
+			<option>Prof.</option>
+		</select>
+		</label>
+	</p>
+
+<p>
+		<label>First name: <input name="firstName" /></label>
+	</p>
+
+<p>
+		<label>Last name: <input name="lastName" /></label>
+	</p>
+
+<p>
+		Gender :
+		<label><input type="radio" name="gender" value="male" /> Male</label>
+		<label><input type="radio" name="gender" value="female" /> Female</label>
+	</p>
+
+
+<p>
+		<label>Email:<input type="email" name="email" /></label>
+	</p>
+
+<p>
+		<label>Date of Birth:<input type="date" name="birthDate"></label>
+	</p>
+
+<p>
+		<label>
+		Address :
+		<br />
+		<textarea name="address" cols="30" rows="3"></textarea>
+		</label>
+	</p>
+
+<p>
+		<button type="submit">Submit</button>
+    </p>
+	</fieldset>
+</form>
 </body>
 </html>
 ```
 
-**Final Result**
+**Output:**
 
-![Spotify](../Images/spotify.png)
+![form](../Images/form.png)
 
-
-# Project
-
-Now lets make a tribute page and lets see few more iframe tags
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tribute Page</title>
-</head>
-<body>
-    <center>
-        <div>
-            <h1>🏏 Virat Kohli 🏏</h1>
-            <p>A spunky, chubby teenager with gelled hair shot to fame after leading India to glory in the Under-19 World Cup at Kuala Lumpur in early 2008. In an Indian team filled with saint-like icons worthy of their own hagiographies, Virat Kohli, with his most un-Indian, 'bad-boy' intensity, would clearly be an outcast.</p>
-        </div>
-        <h2>Tweets 🐦</h2>
-        <div>
-            <blockquote class="twitter-tweet"><p lang="und" dir="ltr">🌊☀️ <a href="https://t.co/VBVvlIIvLh">pic.twitter.com/VBVvlIIvLh</a></p>&mdash; Virat Kohli (@imVkohli) <a href="https://twitter.com/imVkohli/status/1535961086012235776?ref_src=twsrc%5Etfw">June 12, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <div>
-            <h2>Images 🖼️</h2>
-            <img src="https://c.ndtvimg.com/2020-05/tkqluj48_virat-kohli-afp_625x300_30_May_20.jpg" height="500px" width="500px">
-        </div>
-
-        <!-- adding instagram account to webpage using iframes-->
-        <div>
-            <h2>Instagram 🖼️</h2>
-            <iframe width="320" height="440" src="https://www.instagram.com/p/CedeaFMAf0n/embed" frameborder="0"></iframe>
-        </div>
-
-        <!-- adding google maps to webpage using iframes-->
-        <h2> Google Map </h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.400553850174!2d78.03995351503737!3d27.175144783015277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747121d702ff6d%3A0xdd2ae4803f767dde!2sTaj%20Mahal!5e0!3m2!1sen!2sin!4v1655138264150!5m2!1sen!2sin" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        <!-- can we embed spotify -->
-        <!-- yes we have learnt it above -->
-        <h2>Favourite Songs</h2>
-        <div style="left: 0; width: 100%; height: 80px; position: relative;"><iframe src="https://open.spotify.com/embed/playlist/5a2OuIJ1kEttA8X3PaewlI?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div>
-    </center>
-
-
-
-</body>
-</html>
-```
-
-## Preview
-![image](../Images/Screenshot%202022-09-17%20at%2012.32.10%20PM.png)
-
+# TO-DO
+[Learn HTML by Building a cat photo app](https://www.freecodecamp.org/learn/2022/responsive-web-design/#learn-html-by-building-a-cat-photo-app)

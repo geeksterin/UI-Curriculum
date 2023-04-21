@@ -1,346 +1,239 @@
-# Day 02 HTML
-# The `<form>` Element
+# day 02
 
-All forms start with a ``<form>`` element, like this:
+## Anatomy of an HTML element
 
-```html
-<form action="/my-handling-form-page" method="post">
+![Anatomy](../Images/grumpy-cat-small.png)
 
-</form>
-```
-This element formally defines a form. It's a container element like a ``<section>`` or ``<footer>`` element, but specifically for containing forms; it also supports some specific attributes to configure the way the form behaves. All of its attributes are optional, but it's standard practice to always set at least the action and method attributes:
+The main parts of our element are as follows:
 
-1. The ``action`` attribute defines the location (URL) where the form's collected data should be sent when it is submitted.
-2. The ``method`` attribute defines which HTTP method to send the data with (usually get or post).
+1. The opening tag: This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins or starts to take effect — in this case where the paragraph begins.
 
-# Form elements
-These are the following HTML ``<form>`` elements:
+2. The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the paragraph ends. Failing to add a closing tag is one of the standard beginner errors and can lead to strange results.
 
-1. ``<label>``: It defines label for ``<form>`` elements.
+3. The content: This is the content of the element, which in this case, is just text.
 
-2. ``<input>``: It is used to get input data from the form in various types such as text, password, email, etc by changing its type.
-3. ``<button>``: It defines a clickable button to control other elements or execute a functionality.
-4. ``<select>``: It is used to create a drop-down list.
-5. ``<textarea>``: It is used to get input long text content.
-6. ``<fieldset>``: It is used to draw a box around other form elements and group the related data.
-7. ``<option>``: It is used to define options in a drop-down list.
+4. The element: The opening tag, the closing tag, and the content together comprise the element.
 
-# Textbox in HTML Form
-In an HTML form, we use the ``<input>`` tag by assigning type attribute value to text to input single line input. To define type attribute see the below syntax. 
-
-Tip: The default value of the type attribute is “text”.
+## Nesting elements
+You can put elements inside other elements too — this is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word "very" in a ```<strong>``` element, which means that the word is to be strongly emphasized:
 
 ```html
-Syntax:
-
-<input type="text" />
+<p>My cat is <strong>very</strong> grumpy.</p>
 ```
 
-Or shorthand for “text” type:
-```html
-<input />
-```
-
-# Password in an HTML Form
-We can change type value text to password to get the input password 
-
-Example:
+You do however need to make sure that your elements are properly nested. In the example above, we opened the ```<p>``` element first, then the ```<strong>``` element; therefore, we have to close the ```<strong>``` element first, then the ```<p> ```element. The following is incorrect:
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-<h2>Lets Make a Login page</h2>
-<form>
-<p>
-	<label>Username : <input type="text" /></label>
-</p>
-<p>
-	<label>Password : <input type="password" /></label>
-</p>
-<p>
-	<button type="submit">Submit</button>
-</p>
-</form>
-</body>
-</html>
+<p>My cat is <strong>very grumpy.</p></strong>
 ```
 
-**Output:**
+The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap as shown above, then your web browser will try to make the best guess at what you were trying to say, which can lead to unexpected results. So don't do it!
 
-![output](../Images/login.png)
+## Empty elements
+Some elements have no content and are called empty elements. Take the ```<img>``` element that we already have in our HTML page:
 
-In the above example, we can see the difference between type text and type password. The username will be visible but the password will not be visible. 
-
-# Radio Button in an HTML Form
-To create a radio button, we use the ``<input>`` tag following by radio type to provide users to choose a limited number of choices.
-
- Syntax:
 ```html
-<input type="radio" name="radio_button_name" value="radio_button_value" />
+<img src="images/firefox-icon.png" alt="My test image">
 ```
+This contains two attributes, but there is no closing ```</img>``` tag and no inner content. This is because an image element doesn't wrap content to affect it. Its purpose is to embed an image in the HTML page in the place it appears.
 
-**Note:** The radio button must have shared the same name to be treated as a group. 
+**Note:** The src,alt in img tag are known as attributes. so let's see what attributes are:
 
-**Note:** The value attribute defines the unique value associated with each radio button. The value is not shown to the user, but is the value that is sent to the server on “submit” to identify which radio button that was selected.
+## Attributes
 
-**Example:**
+![Attributes](../Images/grumpy-cat-attribute-small.png)
 
-In this example, we will create a radio button to choose your gender. 
+Attributes contain extra information about the element that you don't want to appear in the actual content. Here, class is the attribute name and editor-note is the attribute value. The class attribute allows you to give the element a non-unique identifier that can be used to target it (and any other elements with the same class value) with style information and other things.
+
+An attribute should always have the following:
+
+1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes).
+
+2. The attribute name followed by an equal sign.
+3. The attribute value wrapped by opening and closing quotation marks.
+
+# Anatomy of an HTML document
+That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our index.html example (which we first met in the Dealing with files article):
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-<h2>Select your gender</h2>
-<form>
-	<label>Male<input type="radio" name="gender" value="male" /></label>
-	<label>Female<input type="radio" name="gender" value="female" /></label>
-</form>
-</body>
-</html>
-
-```
-
-
-**Output:**
-
-![select](../Images/radiobox.jpg)
-
-# Checkbox in an HTML Form
-To create a checkbox in an HTML form, we use the ``<input>`` tag followed by the input type checkbox. It is a square box to tick to activate this. It used to choose more options at a time. 
-
-Syntax:
-```html
-<input type="checkbox" name="select_box_name" value="select_box_value" />
-```
-
-**Note:** the “name” and “value” attributes are used to send the checkbox data to the server.
-
-**Example:**
-
-In this example, we use checkboxes to select language. 
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-<h2>Choose Language</h2>
-<form>
-	<ul style="list-style-type:none;">
-	<li><input type="checkbox" name="language" value="hindi" />Hindi</li>
-	<li><input type="checkbox" name="language" value="english" />English</li>
-	<li><input type="checkbox" name="language" value="sanskrite" />Sanskrit</li>
-	</ul>
-</form>
-</body>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My test page</title>
+  </head>
+  <body>
+    <h1>This is a first level heading in HTML.</h1>
+  <h2>This is a second level heading in HTML.</h2>
+  <h3>This is a third level heading in HTML.</h3>
+  <p>This is a <em>paragragh</em> As you can see, I placed an empahisis on the word "paragraph".</p>
+  <p>The main essence of this tutorial is to:</p>
+    <ul>
+       <li>Show you how to format a web document with HTML</li>
+       <li>Show you how to design a web page with CSS</li>
+       <li>Show you how to program a web document with JavaScript</li>
+    </ul>
+  </body>
 </html>
 ```
 
-**Output:**
+![index](../Images/index.png)
 
-![checkbox](../Images/checkbox.jpg)
+**Here We have the following:**
 
+1. ```<!DOCTYPE html>``` — doctype. It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
 
-# Combobox in an HTML Form
-Combobox is used to create a drop-down menu in your form which contains multiple options. So, to create an Combobox in an HTML form, we use the ``<select>`` tag with ``<option>`` tag. It is also known as a drop-down menu. 
+2. ```<html></html>``` — the ```<html>``` element. This element wraps all the content on the entire page and is sometimes known as the root element. It also includes the lang attribute, setting the primary language of the document.
 
-Syntax:
+3. ```<head></head>``` — the ```<head>``` element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
 
-```html
-<select name="select_box_name">
-  <option value="value1">option1</option>
-  <option value="value2">option2</option>
-  <option value="value3">option3</option>
-</select>
-```
+4. ```<meta charset="utf-8">``` — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this and it can help avoid some problems later on.
+5. ```<meta name="viewport" content="width=device-width">``` — This viewport element ensures the page renders at the width of viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
+6. ```<title></title>``` — the ```<title>``` element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
+7. ``<body></body>`` — the ``<body>`` element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
 
-**Note:** the “name” and “value” attributes are used to send the Combobox data to the server.
+# Marking up text
+This section will cover some of the essential HTML elements you'll use for marking up the text.
 
-**Example:**
-
-In this example, we will create a dropdown menu to select Nationality. 
+## Headings
+Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, ``<h1>`` - ``<h6>``, although you'll commonly only use 3 to 4 at most:
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-<h2>Select Your Nationality</h2>
-<form>
-<select name="language">
-	<option value="indian">Indian</option>
-	<option value="nepali">Nepali</option>
-	<option value="others">Others</option>
-</select>
-</form>
-</body>
-</html>
+<!-- 4 heading levels: -->
+<h1>My main title</h1>
+<h2>My top level heading</h2>
+<h3>My subheading</h3>
+<h4>My sub-subheading</h4>
+```
+```
+Note: Anything in HTML between <!-- and --> is an HTML comment. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
 ```
 
-**Output:**
+Now try adding a suitable title to your HTML page just above your ``<img>`` element.
 
-![combobox](../Images/combobox.jpg)
-
-# Submit button in an HTML Form
-In the HTML form, submit button is used to submit the details of the form to the form handler. A form handler is a file on the server with a script that is used to process input data.  
-
-Syntax:
-```html
- <button type="submit">submit</button>
- ```
-
- ```html
- <!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-
-<h2>Submit button Tut.</h2>
-
-<form>
-
-<p>
-	<label>Username: <input type="text" /></label>
-<p>
-	<label>Password: <input type="password" /></label>
-</p>
-<p>
-	<button type="submit">submit</button>
-</p>
-
-</form>
-</body>
-</html>
+```
+Note: You'll see that your heading level 1 has an implicit style. Don't use heading elements to make text bigger or bold, because they are used for accessibility and other reasons such as SEO. Try to create a meaningful sequence of headings on your pages, without skipping levels.
 ```
 
-**Output:**
-
-![submit](../Images/submit.png)
-
-
-# TextArea in an HTML Form
-
-In the HTML form, a text area is used to add comments or reviews, or addresses to the form, in other words, the text area is a multi-line text input control. It contains an unlimited number of characters, the text renders in a fixed-width font, and the size of the text area is given by the ``<rows>`` and ``<cols>`` attributes. To create a text area in the form use the ``<textarea>`` tag.
-
-Syntax:
-```html
-<textarea name="textarea_name">content</textarea>
-```
-
-**Note:** the name attribute is used to reference the textarea data after it is send to a server.
-
-Example:
+## Paragraphs
+As explained above, <p> elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content:
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-<h2>TextArea Tutorial</h2>
-<form>
-	<textarea name="welcomeMessage" rows="3" cols="40">This is a text area</textarea>
-</form>
-</body>
-</html>
+<p>This is a single paragraph</p>
+Add your sample text (you should have it from What will your website look like?) into one or a few paragraphs, placed directly below your <img> element.
 ```
 
-**Output:**
+## Lists
+A lot of the web's content is lists and HTML has special elements for these. Marking up lists always consists of at least 2 elements. The most common list types are ordered and unordered lists:
 
-![Textarea](../Images/Textarea.png)
+1. Unordered lists are for lists where the order of the items doesn't matter, such as a shopping list. These are wrapped in a ``<ul>`` element.
 
-# Create an HTML form to input the basic details of a student
-In this example, we will take input such as Salutation, First Name, Last Name, Email, Phone, Gender, Date of Birth, and Address. 
+2. Ordered lists are for lists where the order of the items does matter, such as a recipe. These are wrapped in an ``<ol>`` element.
 
-To create this form, we need to use the ``<legend> ``tag to defined caption, ``<select>`` tag for Salutation, ``<option>`` tag to define elements of Salutation, ``<input>`` tag for First Name, Last Name, Email, Phone, Date of Birth by changing ``<input>`` tag type attribute, ``<textarea>`` to input address, radio button for gender. After defining all these stuffs, we will use a ``<button>`` to submit this form data. 
+Each item inside the lists is put inside an ``<li> ``(list item) element.
+
+For example, if we wanted to turn the part of the following paragraph fragment into a list
+
+```html
+<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
+```
+We could modify the markup to this
+
+```html
+<p>At Mozilla, we're a global community of</p>
+
+<ul>
+  <li>technologists</li>
+  <li>thinkers</li>
+  <li>builders</li>
+</ul>
+
+<p>working together… </p>
+```
+Try adding an ordered or unordered list to your example page.
+
+# Links
+Links are very important — they are what makes the web a web! To add a link, we need to use a simple element — ``<a>`` — "a" being the short form for "anchor". To make text within your paragraph into a link, follow these steps:
+
+Choose some text. We chose the text "Mozilla Manifesto".
+Wrap the text in an ``<a>`` element, as shown below:
+```html
+<a>Mozilla Manifesto</a>
+```
+
+Give the ``<a>`` element an href attribute, as shown below:
+```html
+<a href="">Mozilla Manifesto</a>
+```
+
+Fill in the value of this attribute with the web address that you want the link to:
+```html
+<a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
+```
+
+You might get unexpected results if you omit the https:// or http:// part, called the protocol, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
+
+# Project
+Now lets make a resume with the help of html
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bittoo Aggarwal</title>
 </head>
 <body>
-<form>
-	<fieldset>
-	<legend>Personal Details</legend>
-
-<p>
-		<label>
-		Salutation
-		<br />
-		<select name="salutation">
-			<option>--None--</option>
-			<option>Mr.</option>
-			<option>Ms.</option>
-			<option>Mrs.</option>
-			<option>Dr.</option>
-			<option>Prof.</option>
-		</select>
-		</label>
-	</p>
-
-<p>
-		<label>First name: <input name="firstName" /></label>
-	</p>
-
-<p>
-		<label>Last name: <input name="lastName" /></label>
-	</p>
-
-<p>
-		Gender :
-		<label><input type="radio" name="gender" value="male" /> Male</label>
-		<label><input type="radio" name="gender" value="female" /> Female</label>
-	</p>
-
-
-<p>
-		<label>Email:<input type="email" name="email" /></label>
-	</p>
-
-<p>
-		<label>Date of Birth:<input type="date" name="birthDate"></label>
-	</p>
-
-<p>
-		<label>
-		Address :
-		<br />
-		<textarea name="address" cols="30" rows="3"></textarea>
-		</label>
-	</p>
-
-<p>
-		<button type="submit">Submit</button>
+    <h1>Bittoo Aggarwal</h1>
+    <p>Software Developer, Educator at Geekster</p>
+    <a href="https://www.linkedin.com/in/bittoo-aggarwal/">Linkedin</a>
+    <a href="https://github.com/bitz1119">Github</a>
+    <hr>
+    <h2>Experience</h2>
+    <h3> Software developer at Amazon</h3>
+    <p>I work with amazon in transportation team, some more description Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, ullam! Maxime officiis consequuntur libero eaque reprehenderit quisquam nam ab vitae totam id commodi laborum enim, sint ea odit quasi soluta!
+        <br>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident iusto ut praesentium modi. Incidunt atque voluptatem, dignissimos officiis reprehenderit est!
     </p>
-	</fieldset>
-</form>
+    <hr>
+
+    <h3> Educator at Geekster</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora cum inventore aliquam, nulla eos dignissimos ipsum voluptas id, dolores suscipit totam nostrum perferendis alias, expedita quaerat distinctio asperiores! Nobis, aliquid.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsa ab qui autem nesciunt vel consequatur non totam, temporibus excepturi voluptatem iure impedit ut repellendus earum necessitatibus nemo eligendi, animi debitis reiciendis suscipit. Unde iure obcaecati dolores, numquam quibusdam rerum facilis a quam quos ad ullam consectetur reiciendis deserunt similique.
+    </p>
+    <hr>
+
+    <h2>Skills</h2>
+    <!-- how to comment -->
+    <!-- I want to add skills list -->
+    <ul>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>Testing</li>
+        <li>API Designing</li>
+        <li>System Design</li>
+    </ul>
+
+    <hr>
+    <h2>Hobbies</h2>
+    <ol>
+        <li>Table Tennis</li>
+        <li>Reading Books</li>
+        <li>Biography</li>
+        <li>Teaching</li>
+    </ol>
+    <hr>
 </body>
 </html>
 ```
 
-**Output:**
+Above Resume will look like this on browser,
 
-![form](../Images/form.png)
+![resume](../Images/resume.png)
+![resume2](../Images/resume2.png)
 
-# TO-DO
-[Learn HTML by Building a cat photo app](https://www.freecodecamp.org/learn/2022/responsive-web-design/#learn-html-by-building-a-cat-photo-app)
+
+
