@@ -125,6 +125,9 @@ In addition to the src and alt attributes, there are several optional attributes
 
 - loading: This attribute tells the browser how to load the image, with possible values of "lazy" or "eager". "Lazy" means the image will be loaded only when
 
+# Assignment
+- https://priyanshu-240499.github.io/Assignments-CSS/html_day2/day2.html
+
 
 
 
