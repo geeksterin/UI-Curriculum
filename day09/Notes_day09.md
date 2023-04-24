@@ -1,3 +1,4 @@
+# Day 09
 # HTML 5
 
 HTML5 (Hypertext Markup Language version 5) is the latest version of the markup language used to create and design web pages. It was released in 2014 and has since become the standard for web development. HTML5 includes many new features and improvements over its predecessor, HTML4, such as improved support for multimedia content, better semantics and structure, and enhanced accessibility for users with disabilities. HTML5 also supports new APIs that allow web developers to create more interactive and engaging websites, such as the Canvas API for 2D and 3D graphics and the Web Audio API for audio processing. Overall, HTML5 has made it easier for developers to create modern and responsive web applications that work across multiple platforms and devices.

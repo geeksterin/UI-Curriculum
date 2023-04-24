@@ -125,8 +125,40 @@ In addition to the src and alt attributes, there are several optional attributes
 
 - loading: This attribute tells the browser how to load the image, with possible values of "lazy" or "eager". "Lazy" means the image will be loaded only when
 
-# Assignment
-- https://priyanshu-240499.github.io/Assignments-CSS/html_day2/day2.html
+
+# Block and Inline HTML
+
+In HTML, elements are classified as either block-level or inline elements based on their behavior and how they are displayed on the web page.
+
+Block-level elements are displayed as a block on the page, taking up the full width available to them and creating a new line after the element. They are typically used for larger pieces of content, such as headings, paragraphs, and lists.
+
+Example of block-level element:
+
+```html
+<div>
+  <h1>Heading 1</h1>
+  <p>This is a paragraph of text.</p>
+  <ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ul>
+</div>
+```
+
+In this example, the ```<div>``` element is a block-level element, and it contains other block-level elements such as ```<h1>, <p>, and <ul>.``` When the page is rendered, each of these elements will be displayed as a block, taking up the full width of the container element, and creating a new line after each one.
+
+Inline elements, on the other hand, are displayed inline with the surrounding content, without creating a new line after the element. They are typically used for smaller pieces of content, such as links, images, and text formatting.
+
+Example of inline element:
+
+```html
+<p>This is a paragraph with a <strong>strong</strong> and <em>emphasized</em> text.</p>
+```
+
+In this example, the ```<strong> and <em>``` elements are inline elements, and they are used to add emphasis to certain words within the paragraph. When the page is rendered, these elements will be displayed inline with the surrounding text, without creating a new line.
+
+It's important to note that some elements, such as ```<span> and <a>```, can be either block-level or inline, depending on how they are used and whether they are given a specific width or height.
 
 
 # Tables in HTML 
@@ -218,3 +250,7 @@ These attributes can be used individually or in combination to customize the app
         </body>
         </html>
         ```
+
+
+# Assignment
+- https://priyanshu-240499.github.io/Assignments-CSS/html_day2/day2.html
