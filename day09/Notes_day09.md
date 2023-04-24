@@ -57,7 +57,7 @@ In this example, we have used semantic HTML elements such as <header>, <nav>, <s
 
 Format Elements:
 
-Format elements in HTML are used to format text and apply styles to web content. Some examples of format elements in HTML are <b>, <i>, <u>, <strong>, <em>, <mark>, <sub>, <sup>, and <strike>.
+Format elements in HTML are used to format text and apply styles to web content. Some examples of format elements in HTML are ``<b>``,`` <i>``, ``<u>``, ``<strong>``, ``<em>``, ``<mark>``,`` <sub>``,`` <sup>``, and ``<strike>``.
 
 Format elements provide several benefits for web developers and users, including:
 
