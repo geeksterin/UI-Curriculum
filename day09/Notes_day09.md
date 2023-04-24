@@ -1,226 +1,235 @@
-## Day 04 HTML
+HTML Semantic Elements are HTML tags that provide meaning and context to web content. These elements help search engines and web browsers understand the structure and purpose of web pages, making it easier for them to crawl and index content accurately. Some examples of semantic HTML elements are <header>, <footer>, <nav>, <article>, <section>, and <aside>.
 
-## HTML Tables 
-HTML tables are used to display data in rows and columns on a web page. They are created using the ``<table>`` element and its associated elements, such as ``<tr>`` for table rows and ``<td>`` for table data cells.
+Semantic HTML elements provide several benefits for web developers and users, including:
 
-Here is an example of a basic HTML table structure:
-```html
-<table>
-  <tr>
-    <td>Row 1, Column 1</td>
-    <td>Row 1, Column 2</td>
-  </tr>
-  <tr>
-    <td>Row 2, Column 1</td>
-    <td>Row 2, Column 2</td>
-  </tr>
-</table>
-```
-In this example, we have a table with two rows and two columns. The <tr> element defines each row, and the <td> element defines each cell in the row.
+- Accessibility: Semantic HTML elements help improve accessibility by providing a more meaningful and structured way to describe content. This can make it easier for screen readers and other assistive technologies to understand the content of web pages.
 
-You can also use the <th> element to define header cells for each column, like this:
-```html
-<table>
-  <tr>
-    <th>Column 1 Header</th>
-    <th>Column 2 Header</th>
-  </tr>
-  <tr>
-    <td>Row 1, Column 1</td>
-    <td>Row 1, Column 2</td>
-  </tr>
-  <tr>
-    <td>Row 2, Column 1</td>
-    <td>Row 2, Column 2</td>
-  </tr>
-</table>
-```
-In this example, the first row contains header cells defined with the <th> element, which are typically displayed in bold and centered by default.
+- SEO: Semantic HTML elements can help improve search engine optimization (SEO) by providing more accurate information about the content of web pages. This can make it easier for search engines to understand and index content, which can lead to better search rankings.
 
-HTML tables can also be styled using CSS, allowing you to control the appearance of the table, its cells, and its borders.
+- Maintenance: Semantic HTML elements can make it easier to maintain and update web pages by providing a more organized and structured way to organize content. This can make it easier to make changes and updates to web pages without affecting the overall structure and layout.
 
+Here is an example of how semantic HTML elements can be used in a web page:
 
-![Tables](../Images/tables.gif)
-
-Code: 
-```html
-
- <!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="utf-8">
-            <meta name="description" content="">
-            <meta name="keywords" content="">
-            <title>Table Practice</title>
-        </head>
-        <body>
-            <table border="1" align="center" cellpadding="10px">
-                <thead>
-                    <tr>
-                        <th rowspan="3">Day</th>
-                        <th colspan="3">Seminar</th>
-                    </tr>
-                    <tr>
-                        <th colspan="2">Schedule</th>
-                        <th rowspan="2">Topic</th>
-                    </tr>
-                    <tr>
-                        <th>Begin</th>
-                        <th>End</th>
-                    </tr>
-                </thead>
-        
-                <tbody>
-                    <tr>
-                        <td rowspan="2">Monday</td>
-                        <td rowspan="2">8:00 a.m</td>
-                        <td rowspan="2">5:00 p.m</td>
-                        <td>Introduction to XML</td>
-                    </tr>
-                    <tr>
-                        <td>Validity: DTD and Relax NG</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="4">Tuesday</td>
-                        <td>8:00 a.m</td>
-                        <td>11:00 a.m</td>
-                        <td rowspan="2">XPath</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">11:00 a.m</td>
-                        <td rowspan="2">2:00 p.m</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">XSL transformation</td>
-                    </tr>
-                    <tr>
-                        <td>2:00 p.m</td>
-                        <td>5:00 p.m</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>8:00 a.m</td>
-                        <td>12:00 p.m</td>
-                        <td>XLS Formatting Objects</td>
-                    </tr>
-        
-                </tbody>
-            </table>
-        
-        </body>
-        </html>
-```        
-
-## iFrames
-
-Q. Ever wondered how we can add a interactive spotify playlist to our webpage?
-
-In this lecture we will see how to add or embed a interactive spotify playlist on our webpage.
-
-**Final Result**
-
-![Spotify](../Images/spotify.png)
-
-Now lets see how we did it !
-
-We did it with the help of iframely domains,
-
-1. So Go to [https://iframely.com/domains](https://iframely.com/domains)
-
-2. you would be landed on this page:
-
-![landing](../Images/landing.png)
-
-3. Select Spotify media from the given option :
-
-![select](../Images/select.png)
-
-4. Now you are able to see something like this.
-
-![landing](../Images/landing2.png)
-
-5. so just copy paste the link of playlist you want in your website.
-
-![paste](../Images/paste.png)
-
-6. Final step copy this code and paste in your html body to see the result
-
-![final](../Images/final.png)
-
-now, demo HTML Code
-
-```html
+```html 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<title>Example Page</title>
 </head>
 <body>
-    <!-- paste the copied code here -->
-    <div style="left: 0; width: 100%; height: 380px; position: relative;"><iframe src="https://open.spotify.com/embed/playlist/5ABHKGoOzxkaa28ttQV9sE?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div>
-
+	<header>
+		<h1>Example Page</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section>
+		<article>
+			<header>
+				<h2>Article 1</h2>
+				<p>Posted on <time datetime="2023-04-24">April 24, 2023</time> by John Doe</p>
+			</header>
+			<p>This is the content of article 1.</p>
+		</article>
+		
+		<article>
+			<header>
+				<h2>Article 2</h2>
+				<p>Posted on <time datetime="2023-04-25">April 25, 2023</time> by Jane Doe</p>
+			</header>
+			<p>This is the content of article 2.</p>
+		</article>
+	</section>
+	
+	<footer>
+		<p>Copyright © 2023 Example Page</p>
+	</footer>
 </body>
 </html>
 ```
 
-**Final Result**
+In this example, we have used semantic HTML elements such as <header>, <nav>, <section>, <article>, and <footer> to provide structure and meaning to the web page. This can make it easier for search engines to understand the content of the web page, which can improve search rankings.
 
-![Spotify](../Images/spotify.png)
+Format Elements:
 
+Format elements in HTML are used to format text and apply styles to web content. Some examples of format elements in HTML are <b>, <i>, <u>, <strong>, <em>, <mark>, <sub>, <sup>, and <strike>.
 
-# Project
+Format elements provide several benefits for web developers and users, including:
 
-Now lets make a tribute page and lets see few more iframe tags
+- Readability: Format elements can make web content more readable by emphasizing important text and breaking up large blocks of text into smaller, more manageable chunks.
+
+- Accessibility: Format elements can improve accessibility by providing a more structured and organized way to format web content. This can make it easier for users with disabilities to understand and navigate web pages.
+
+- Aesthetics: Format elements can enhance the aesthetic appeal of web pages by adding style and visual interest to web content.
+
+Here is an example of web page:
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tribute Page</title>
+	<title>Example Page</title>
+	<style>
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			color: #333;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}
+		
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			color: #666;
+			margin-bottom: 10px;
+		}
+		
+		em {
+			font-style: italic;
+		}
+		
+		strong {
+			font-weight: bold;
+			color: #f00;
+		}
+		
+		u {
+			text-decoration: underline;
+		}
+	</style>
 </head>
 <body>
-    <center>
-        <div>
-            <h1>🏏 Virat Kohli 🏏</h1>
-            <p>A spunky, chubby teenager with gelled hair shot to fame after leading India to glory in the Under-19 World Cup at Kuala Lumpur in early 2008. In an Indian team filled with saint-like icons worthy of their own hagiographies, Virat Kohli, with his most un-Indian, 'bad-boy' intensity, would clearly be an outcast.</p>
-        </div>
-        <h2>Tweets 🐦</h2>
-        <div>
-            <blockquote class="twitter-tweet"><p lang="und" dir="ltr">🌊☀️ <a href="https://t.co/VBVvlIIvLh">pic.twitter.com/VBVvlIIvLh</a></p>&mdash; Virat Kohli (@imVkohli) <a href="https://twitter.com/imVkohli/status/1535961086012235776?ref_src=twsrc%5Etfw">June 12, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <div>
-            <h2>Images 🖼️</h2>
-            <img src="https://c.ndtvimg.com/2020-05/tkqluj48_virat-kohli-afp_625x300_30_May_20.jpg" height="500px" width="500px">
-        </div>
-
-        <!-- adding instagram account to webpage using iframes-->
-        <div>
-            <h2>Instagram 🖼️</h2>
-            <iframe width="320" height="440" src="https://www.instagram.com/p/CedeaFMAf0n/embed" frameborder="0"></iframe>
-        </div>
-
-        <!-- adding google maps to webpage using iframes-->
-        <h2> Google Map </h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.400553850174!2d78.03995351503737!3d27.175144783015277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747121d702ff6d%3A0xdd2ae4803f767dde!2sTaj%20Mahal!5e0!3m2!1sen!2sin!4v1655138264150!5m2!1sen!2sin" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        <!-- can we embed spotify -->
-        <!-- yes we have learnt it above -->
-        <h2>Favourite Songs</h2>
-        <div style="left: 0; width: 100%; height: 80px; position: relative;"><iframe src="https://open.spotify.com/embed/playlist/5a2OuIJ1kEttA8X3PaewlI?utm_source=oembed" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture;"></iframe></div>
-    </center>
-
-
-
+	<h1>Example Page</h1>
+	
+	<p>This is an <em>example</em> of how format elements can be used in HTML. You can use <strong>strong</strong> and <u>underline</u> tags to emphasize text, and <em>italic</em> tags to add emphasis or highlight key phrases. </p>
+	
+	<p>You can also use the <sup>superscript</sup> and <sub>subscript</sub> tags to format mathematical expressions or chemical formulas, or the <mark>mark</mark> tag to highlight important text. </p>
+	
 </body>
 </html>
 ```
+example of how format elements can be used in a web page:
 
-## Preview
-![image](../Images/Screenshot%202022-09-17%20at%2012.32.10%20PM.png)
+php
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example Page</title>
+	<style>
+		h1 {
+			font-size: 36px;
+			font-weight: bold;
+			color: #333;
+			text-align: center;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}
+		
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			color: #666;
+			margin-bottom: 10px;
+		}
+		
+		em {
+			font-style: italic;
+		}
+		
+		strong {
+			font-weight: bold;
+			color: #f00;
+		}
+		
+		u {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<h1>Example Page</h1>
+	
+	<p>This is an <em>example</em> of how format elements can be used in HTML. You can use <strong>strong</strong> and <u>underline</u> tags to emphasize text, and <em>italic</em> tags to add emphasis or highlight key phrases. </p>
+	
+	<p>You can also use the <sup>superscript</sup> and <sub>subscript</sub> tags to format mathematical expressions or chemical formulas, or the <mark>mark</mark> tag to highlight important text. </p>
+	
+</body>
+</html>
+In this example, we have used format elements such as <em>, <strong>, <u>, <sup>, <sub>, and <mark> to format and style the text in the web page. We have also used CSS to apply additional styles to the text, such as font size, color, and alignment. This can make the web page more visually appealing and easier to read.
 
+How HTML helps in SEO:
+
+HTML plays a crucial role in search engine optimization (SEO) by providing a structured and organized way to describe the content of web pages. Here are some of the ways that HTML can help improve SEO:
+
+1. Title tags: HTML title tags provide a concise and accurate description of the content of web pages. Title tags appear in search engine results pages (SERPs) and are often the first thing that users see when they search for a particular keyword or phrase. Including relevant keywords in the title tag can help improve search rankings.
+
+```html
+<title>Example Page - Web Development</title>
+```
+
+2. Meta descriptions: HTML meta descriptions provide a brief summary of the content of web pages. Meta descriptions also appear in SERPs and can help attract users to click on a particular search result. Including relevant keywords and a call-to-action (CTA) in the meta description can improve click-through rates (CTR) and search rankings.
+
+```html
+<meta name="description" content="Learn about web development and how to build effective web applications.">
+```
+
+3. Heading tags: HTML heading tags (such as <h1>, <h2>, <h3>, etc.) provide a hierarchical structure to the content of web pages. Using heading tags to organize and structure content can make it easier for search engines to understand the content of the web page and improve search rankings.
+Example:
+
+```html
+<h1>Example Page</h1>
+<h2>Introduction</h2>
+<p>This is an example of how HTML can improve search engine optimization.</p>
+<h2>Title Tags</h2>
+<p>HTML title tags provide a concise and accurate description of web pages.</p>
+```
+
+4. Image tags: HTML image tags provide a way to describe images and other multimedia content on web pages. Using relevant keywords in the image alt attribute can improve search rankings and make the web page more accessible to users with disabilities.
+
+Example:
+```html
+<img src="example-image.jpg" alt="Example of a web development project" />
+```
+
+5. Semantic markup: HTML semantic elements (such as <header>, <nav>, <main>, <article>, <aside>, and <footer>) provide a way to describe the structure and content of web pages in a more meaningful way. Using semantic markup can improve search rankings by making it easier for search engines to understand the content and purpose of different sections of the web page.
+Example:
+
+```html
+<header>
+	<h1>Example Page</h1>
+	<nav>
+		<ul>
+			<li><a href="#introduction">Introduction</a></li>
+			<li><a href="#title-tags">Title Tags</a></li>
+			<li><a href="#images">Images</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<article>
+		<h2 id="introduction">Introduction</h2>
+		<p>This is an example of how HTML can improve search engine optimization.</p>
+	</article>
+	<article>
+		<h2 id="title-tags">Title Tags</h2>
+		<p>HTML title tags provide a concise and accurate description of web pages.</p>
+	</article>
+	<article>
+		<h2 id="images">Images</h2>
+		<p>HTML image tags provide a way to describe images and other multimedia content on web pages.</p>
+	</article>
+</main>
+<footer>
+	<p>&copy; 2023 Example Company. All rights reserved.</p>
+</footer>
+```
+
+In this example, we have used semantic markup to describe the structure and content of the web page. We have used <header> and <footer> to define the top and bottom sections of the web page, <nav> to define a navigation menu, <main> to define the main content of the web page, and <article> to define individual sections of the content. Using semantic markup can improve search rankings by making it easier for search engines to understand the purpose and meaning of different sections of the web page.
