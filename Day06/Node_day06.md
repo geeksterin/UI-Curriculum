@@ -47,17 +47,17 @@ A database is a software program that stores and manages data in an organized ma
 
 # DSA In web Development
 
-Data structures and algorithms (DSA) play a crucial role in web development by providing efficient ways to store, manipulate, and retrieve data in web applications. Here are some of the specific roles that DSA plays in web development:
+DSA, or Data Structures and Algorithms, are essential for web development, as they enable developers to create efficient and scalable web applications. Here are some examples of how DSA can be used in web development:
 
-- Performance optimization: DSA can help optimize the performance of web applications by providing efficient algorithms for tasks such as searching, sorting, and filtering data. By using efficient algorithms, web developers can reduce the time it takes for web pages to load and improve the overall performance of the application.
+- Arrays and Linked Lists: Arrays and linked lists are used to store and manipulate data in web applications. For example, arrays are commonly used to store user input data in forms, while linked lists can be used to represent hierarchical data structures such as menus.
 
-- Data storage and retrieval: DSA provides a range of data structures such as arrays, linked lists, trees, and graphs that can be used to store and retrieve data in web applications. These data structures enable web developers to organize and manipulate data efficiently, which is essential for building complex web applications.
+- Hash Tables: Hash tables are used to store key-value pairs in web applications. They are commonly used for caching, session management, and database indexing.
 
-- Algorithm design: DSA teaches developers how to design algorithms that solve complex problems and perform tasks efficiently. This skill is essential for developing web applications that require complex operations, such as processing large datasets or performing real-time analytics.
+- Graphs: Graphs are used to represent complex relationships between data in web applications. For example, social media platforms use graphs to represent connections between users and their friends.
 
-- Code optimization: DSA helps developers write optimized code that uses minimal resources and performs efficiently. By using DSA techniques, developers can improve the performance of their code and reduce the time it takes for web pages to load.
+- Sorting and Searching: Sorting and searching algorithms are used to efficiently find and retrieve data from large datasets in web applications. For example, a search engine uses algorithms such as binary search to quickly find relevant search results for a given query.
 
-In summary, DSA plays a critical role in web development by providing efficient ways to store and manipulate data, optimizing the performance of web applications, and designing algorithms that solve complex problems.
+Overall, the use of DSA in web development allows for efficient and scalable web applications that can handle large amounts of data and provide a seamless user experience.
 
 ##  Web Terminology
 1. HTML (HyperText Markup Language) - the "programming" language used to write web pages
@@ -129,8 +129,6 @@ If we wanted the line to stand by itself, we could specify that it is a paragrap
 ```
 
 ![HTML Tree](../Images/tree.gif)
-
-# day 02
 
 ## Anatomy of an HTML element
 
@@ -305,24 +303,6 @@ Fill in the value of this attribute with the web address that you want the link 
 ```
 
 You might get unexpected results if you omit the https:// or http:// part, called the protocol, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
-
-<<<<<<< HEAD
-# Audio, Video, Source tags
-The <audio>, <video>, and <source> tags are used in HTML to embed audio and video content into a web page. Here is a brief explanation of what each tag does:
-
-1. <audio> tag:
-- The <audio> tag is used to embed audio content, such as music or speech, into a web page.
-- It supports several attributes such as "src" to specify the URL of the audio file, "controls" to enable playback controls, and "autoplay" to start playback automatically when the page loads.
-2. <video> tag:
-- The <video> tag is used to embed video content, such as movies or TV shows, into a web page.
-- It supports several attributes such as "src" to specify the URL of the video file, "controls" to enable playback controls, and "autoplay" to start playback automatically when the page loads.
-3. <source> tag:
-- The <source> tag is used in conjunction with the <audio> and <video> tags to provide multiple versions of the same media content in different formats or bitrates.
-- This is useful for ensuring that the content can be played on different devices and connection speeds.
-T- he <source> tag supports several attributes such as "src" to specify the URL of the media file, "type" to specify the MIME type of the file, and "media" to specify the media query to use when selecting the source.
-
-
-In summary, the <audio>, <video>, and <source> tags provide a flexible and powerful way to embed audio and video content into a web page, and can be customized using a variety of attributes to provide the desired playback experience.
 
 # List
 In HTML, there are three types of lists: ordered lists, unordered lists, and descriptive lists. Here's a brief explanation of each type and their attributes:

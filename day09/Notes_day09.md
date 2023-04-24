@@ -1,4 +1,4 @@
-HTML Semantic Elements are HTML tags that provide meaning and context to web content. These elements help search engines and web browsers understand the structure and purpose of web pages, making it easier for them to crawl and index content accurately. Some examples of semantic HTML elements are <header>, <footer>, <nav>, <article>, <section>, and <aside>.
+HTML Semantic Elements are HTML tags that provide meaning and context to web content. These elements help search engines and web browsers understand the structure and purpose of web pages, making it easier for them to crawl and index content accurately. Some examples of semantic HTML elements are ```<header>, <footer>, <nav>, <article>, <section>,``` and ```<aside>.```
 
 Semantic HTML elements provide several benefits for web developers and users, including:
 
@@ -53,7 +53,7 @@ Here is an example of how semantic HTML elements can be used in a web page:
 </html>
 ```
 
-In this example, we have used semantic HTML elements such as <header>, <nav>, <section>, <article>, and <footer> to provide structure and meaning to the web page. This can make it easier for search engines to understand the content of the web page, which can improve search rankings.
+In this example, we have used semantic HTML elements such as ```<header>, <nav>, <section>, <article>, and <footer>``` to provide structure and meaning to the web page. This can make it easier for search engines to understand the content of the web page, which can improve search rankings.
 
 Format Elements:
 
@@ -117,8 +117,7 @@ Here is an example of web page:
 ```
 example of how format elements can be used in a web page:
 
-php
-Copy code
+``` 
 <!DOCTYPE html>
 <html>
 <head>
@@ -163,7 +162,10 @@ Copy code
 	
 </body>
 </html>
-In this example, we have used format elements such as <em>, <strong>, <u>, <sup>, <sub>, and <mark> to format and style the text in the web page. We have also used CSS to apply additional styles to the text, such as font size, color, and alignment. This can make the web page more visually appealing and easier to read.
+
+```
+
+In this example, we have used format elements such as ```<em>, <strong>, <u>, <sup>, <sub>, and <mark>``` to format and style the text in the web page. We have also used CSS to apply additional styles to the text, such as font size, color, and alignment. This can make the web page more visually appealing and easier to read.
 
 How HTML helps in SEO:
 
@@ -232,4 +234,4 @@ Example:
 </footer>
 ```
 
-In this example, we have used semantic markup to describe the structure and content of the web page. We have used <header> and <footer> to define the top and bottom sections of the web page, <nav> to define a navigation menu, <main> to define the main content of the web page, and <article> to define individual sections of the content. Using semantic markup can improve search rankings by making it easier for search engines to understand the purpose and meaning of different sections of the web page.
+In this example, we have used semantic markup to describe the structure and content of the web page. We have used ```<header>``` and ```<footer>``` to define the top and bottom sections of the web page, ```<nav>``` to define a navigation menu, ```<main>``` to define the main content of the web page, and ```<article>``` to define individual sections of the content. Using semantic markup can improve search rankings by making it easier for search engines to understand the purpose and meaning of different sections of the web page.
