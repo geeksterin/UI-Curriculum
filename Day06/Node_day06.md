@@ -18,7 +18,7 @@ This is where HTML, CSS, JavaScript and the whole concept of web development com
 
 ![Page Inspector](../Images/ana.jpg)
 
-# Web Terminology
+##  Web Terminology
 1. HTML (HyperText Markup Language) - the "programming" language used to write web pages
 2. Source file - the set of tags and text which make up a web page. Browsers process the source file to make the web page look the way the designer wanted it to look.
 3. URL (Uniform Resource Locator) - a web address; indicates the location of a web resource as well as the protocol needed to access it
