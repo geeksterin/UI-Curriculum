@@ -1,8 +1,109 @@
-# day 02
+- [What is the Internet?](#what-is-the-internet)
+- [What is the Web?](#what-is-the-web)
+- [Web Terminology](#web-terminology)
+- [Browser Features](#browser-features)
+    - [Page Inspector](#page-inspector)
+    - [Web Console](#web-console)
+    - [JavaScript Debugger](#javascript-debugger)
+    - [Network Monitor](#network-monitor)
+    - [Responsive Design Mode](#responsive-design-mode)
+- [What is HTML](#what-is-html)
+- [Anatomy of an HTML Element](#anatomy-of-an-html-element)
+    - [Nesting Elements](#nesting-elements)
+    - [Empty Elements](#empty-elements)
+    - [Attributes](#attributes)
+- [Anatomy of an HTML Document](#anatomy-of-an-html-document)
+- [Marking up text](#marking-up-text)
+    - [Heading](#headings)
+    - [Paragraphs](#paragraphs)
+    - [Lists](#lists)
+    - [Links](#links)
+- [Project](#project)
 
-## Anatomy of an HTML element
 
-![Anatomy](../Images/grumpy-cat-small.png)
+# What is the Internet?
+The internet is simply a network of computers that communicate with each other to send and receive data (information).
+
+Each of these computers on the internet can be distinguished and located by a unique number called an IP Address. An IP Address looks something like this: 168.212.226.204
+
+# What is the Web?
+The Web is a subset of the internet.
+
+Like every other computer network out there, the Web is made up of two main components: the web browser client and the web server.
+
+The client requests the data and the server shares or serves its data. To achieve this, the two parties have to establish an agreement. That agreement is called the Application Programming Interface or in short, the API.
+
+But this data has to be arranged and formatted into a form that's understandable by end-users who have a wide range of technical experiences and abilities.
+
+This is where HTML, CSS, JavaScript and the whole concept of web development come into play.
+
+# Web Terminology
+1. HTML (HyperText Markup Language) - the "programming" language used to write web pages
+2. Source file - the set of tags and text which make up a web page. Browsers process the source file to make the web page look the way the designer wanted it to look.
+3. URL (Uniform Resource Locator) - a web address; indicates the location of a web resource as well as the protocol needed to access it
+4. Protocol - ground rules or "language" that internet computers use to "talk" with each other
+5. HTTP (HyperText Transfer Protocol) - the internet protocol which allows web pages to work
+6. FTP (File Transfer Protocol) - allows computers to exchange files over a network
+7. Web page - a single page on the web (a "homepage" is the first web page on a web site)
+8. Web site - a collection of web pages, usually on a particular topic or business
+9. Web browser/navigator/client - the software application which displays web pages
+10. Web server - the computer or network of computers which stores web pages
+
+# Browser Features
+
+## Page Inspector
+![Page Inspector](./Images/landingpage_pageinspector.png)
+
+View and edit page content and layout. Visualize many aspects of the page including the box model, animations, and grid layouts
+
+## Web Console
+![Web Console](./Images/landingpage_console.png)
+
+See messages logged by a web page and interact with the page using JavaScript.
+
+## JavaScript Debugger
+![JavaScript Debugger](./Images/landingpage_debugger.png)
+
+Stop, step through, and examine the JavaScript running on a page.
+
+## Network Monitor
+![Network Monitor](./Images/landingpage_network.png)
+
+See the network requests made when a page is loaded.
+
+## Responsive Design Mode
+![Responsive Design Mode](./Images/landingpage_responsivedesign.png)
+
+See how your website or app will look and behave on different devices and network types.
+
+# What are three application layers
+- Three-tier architecture is a software application architecture that organizes applications into three logical and physical computing tiers.
+The three tiers are:
+ 1. Presentation tier: user interface
+ 2. Application tier: where data is processed
+ 3. Data tier: where the data associated with the application is stored and managed.
+- Three-tier architecture has a chief benefit:
+1. Each tier runs on its own infrastructure, which allows each tier to be developed simultaneously by separate development teams.
+2. Each tier can be updated or scaled as needed without impacting the other tiers.
+
+# What is front end development 
+It is the presentation tear or the user interface of an application. Everything you see on a website, like buttons, links, animations, and more, were created by a front end web developer. It is the front end developer's job to take the vision and design concept from the client and implement it through code.
+
+# What is HTML
+
+- HTML (Hypertext Markup Language) is a standard markup language used to create web pages. It was created by Tim Berners-Lee in the late 1980s to help share scientific information between researchers. Here is a brief history of HTML:
+
+- HTML was first standardized in 1993 as HTML 2.0.
+- HTML 3.0 was released in 1995 and introduced new features such as tables and backgrounds.
+- HTML 4.0 was released in 1997 and added support for Cascading Style Sheets (CSS) and scripting languages like JavaScript.
+- XHTML (Extensible HTML) was introduced in 2000 as the successor to HTML, but it never gained widespread adoption.
+- HTML5 was first introduced in 2008 and became a W3C recommendation in 2014. It added new semantic tags, multimedia support, and improved accessibility features.
+- The latest version, HTML5.3, was published in 2018 and includes new features such as the "picture" element for responsive images and support for the Web Speech API.
+- HTML continues to evolve as new features and technologies are developed for the web.
+
+# Anatomy of an HTML element
+
+![Anatomy](./Images/grumpy-cat-small.png)
 
 The main parts of our element are as follows:
 
@@ -14,7 +115,49 @@ The main parts of our element are as follows:
 
 4. The element: The opening tag, the closing tag, and the content together comprise the element.
 
-## Nesting elements
+## Empty elements
+Some elements have no content and are called empty elements. Take the ```<img>``` element that we already have in our HTML page:
+
+# Structure of html(head tag vs body tag, also what is doctype/is it a tag?)
+
+```html
+<html>
+    <head></head>
+    <body></body>
+</html>
+```
+The head and body tags are two of the most important tags in HTML, and they serve different purposes. Here is a brief explanation of what each tag does:
+
+Head Tag:
+
+- The <head> tag is used to define the head section of an HTML document, which contains information about the document itself.
+- This section typically includes metadata such as the document title, keywords, author information, and character encoding information.
+- Other common elements found in the head section include links to external stylesheets, scripts, and other resources used by the page.
+Body Tag:
+
+- The <body> tag is used to define the main content area of an HTML document, which is visible to the user in the web browser.
+- This section typically includes the text, images, videos, and other media that make up the actual content of the page.
+- Other common elements found in the body section include headings, paragraphs, lists, links, images, forms, and tables.
+
+In summary, the <head> tag is used to define the metadata and resources used by the page, while the <body> tag is used to define the main content area visible to the user.
+
+#  HTML-4 vs HTML-5 
+HTML5 is the latest version of HTML (Hypertext Markup Language) and has several advantages over HTML4. Here are some of the key differences between HTML4 and HTML5:
+
+Semantic tags: HTML5 includes many new semantic tags such as header, footer, section, article, nav, and aside, which make it easier for search engines and screen readers to understand the structure of the page.
+
+Multimedia support: HTML5 includes native support for audio and video, which means that you can embed multimedia content directly into your HTML code without the need for additional plugins like Flash.
+
+Improved form elements: HTML5 introduces new form elements such as date pickers, color pickers, and range sliders, which make it easier to create user-friendly forms.
+
+Canvas and SVG support: HTML5 introduces support for the canvas and SVG elements, which allow for the creation of interactive graphics and animations without the need for additional plugins.
+
+Offline support: HTML5 introduces new features such as the Application Cache and Local Storage, which allow web applications to work offline and store data locally on the user's device.
+
+Better error handling: HTML5 has better error handling and recovery mechanisms, which means that web pages are more likely to render correctly even if there are errors in the code.
+
+
+# Nesting elements
 You can put elements inside other elements too — this is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word "very" in a ```<strong>``` element, which means that the word is to be strongly emphasized:
 
 ```html
@@ -29,9 +172,6 @@ You do however need to make sure that your elements are properly nested. In the 
 
 The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap as shown above, then your web browser will try to make the best guess at what you were trying to say, which can lead to unexpected results. So don't do it!
 
-## Empty elements
-Some elements have no content and are called empty elements. Take the ```<img>``` element that we already have in our HTML page:
-
 ```html
 <img src="images/firefox-icon.png" alt="My test image">
 ```
@@ -41,7 +181,7 @@ This contains two attributes, but there is no closing ```</img>``` tag and no in
 
 ## Attributes
 
-![Attributes](../Images/grumpy-cat-attribute-small.png)
+![Attributes](./Images/grumpy-cat-attribute-small.png)
 
 Attributes contain extra information about the element that you don't want to appear in the actual content. Here, class is the attribute name and editor-note is the attribute value. The class attribute allows you to give the element a non-unique identifier that can be used to target it (and any other elements with the same class value) with style information and other things.
 
@@ -52,8 +192,7 @@ An attribute should always have the following:
 2. The attribute name followed by an equal sign.
 3. The attribute value wrapped by opening and closing quotation marks.
 
-# Anatomy of an HTML document
-That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our index.html example (which we first met in the Dealing with files article):
+# Project+Revisit👇
 
 ```html
 <!DOCTYPE html>
@@ -78,7 +217,7 @@ That wraps up the basics of individual HTML elements, but they aren't handy on t
 </html>
 ```
 
-![index](../Images/index.png)
+![index](./Images/index.png)
 
 **Here We have the following:**
 
@@ -124,117 +263,6 @@ As explained above, <p> elements are for containing paragraphs of text; you'll u
 Add your sample text (you should have it from What will your website look like?) into one or a few paragraphs, placed directly below your <img> element.
 ```
 
-## Lists
-A lot of the web's content is lists and HTML has special elements for these. Marking up lists always consists of at least 2 elements. The most common list types are ordered and unordered lists:
-
-1. Unordered lists are for lists where the order of the items doesn't matter, such as a shopping list. These are wrapped in a ``<ul>`` element.
-
-2. Ordered lists are for lists where the order of the items does matter, such as a recipe. These are wrapped in an ``<ol>`` element.
-
-Each item inside the lists is put inside an ``<li> ``(list item) element.
-
-For example, if we wanted to turn the part of the following paragraph fragment into a list
-
-```html
-<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
-```
-We could modify the markup to this
-
-```html
-<p>At Mozilla, we're a global community of</p>
-
-<ul>
-  <li>technologists</li>
-  <li>thinkers</li>
-  <li>builders</li>
-</ul>
-
-<p>working together… </p>
-```
-Try adding an ordered or unordered list to your example page.
-
-# Links
-Links are very important — they are what makes the web a web! To add a link, we need to use a simple element — ``<a>`` — "a" being the short form for "anchor". To make text within your paragraph into a link, follow these steps:
-
-Choose some text. We chose the text "Mozilla Manifesto".
-Wrap the text in an ``<a>`` element, as shown below:
-```html
-<a>Mozilla Manifesto</a>
-```
-
-Give the ``<a>`` element an href attribute, as shown below:
-```html
-<a href="">Mozilla Manifesto</a>
-```
-
-Fill in the value of this attribute with the web address that you want the link to:
-```html
-<a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
-```
-
-You might get unexpected results if you omit the https:// or http:// part, called the protocol, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
-
-<<<<<<< HEAD
-# Audio, Video, Source tags
-The <audio>, <video>, and <source> tags are used in HTML to embed audio and video content into a web page. Here is a brief explanation of what each tag does:
-
-1. <audio> tag:
-- The <audio> tag is used to embed audio content, such as music or speech, into a web page.
-- It supports several attributes such as "src" to specify the URL of the audio file, "controls" to enable playback controls, and "autoplay" to start playback automatically when the page loads.
-2. <video> tag:
-- The <video> tag is used to embed video content, such as movies or TV shows, into a web page.
-- It supports several attributes such as "src" to specify the URL of the video file, "controls" to enable playback controls, and "autoplay" to start playback automatically when the page loads.
-3. <source> tag:
-- The <source> tag is used in conjunction with the <audio> and <video> tags to provide multiple versions of the same media content in different formats or bitrates.
-- This is useful for ensuring that the content can be played on different devices and connection speeds.
-T- he <source> tag supports several attributes such as "src" to specify the URL of the media file, "type" to specify the MIME type of the file, and "media" to specify the media query to use when selecting the source.
-
-
-In summary, the <audio>, <video>, and <source> tags provide a flexible and powerful way to embed audio and video content into a web page, and can be customized using a variety of attributes to provide the desired playback experience.
-
-# List
-In HTML, there are three types of lists: ordered lists, unordered lists, and descriptive lists. Here's a brief explanation of each type and their attributes:
-
-Ordered Lists:
-```html
-<ol>
-    <li>item-1</li>
-    <li>item-2</li>
-    <li>item-3</li>
-</ol>
-```
-1. An ordered list is a list of items that are ordered numerically or alphabetically. It is created using the <ol> tag.
-Each item in the list is represented by the <li> tag.
-The attributes used in ordered lists include:
-"start": specifies the starting number of the list.
-"type": specifies the type of numbering used, such as decimal, uppercase letters, or lowercase Roman numerals.
-"reversed": reverses the numbering of the list.
-
-```html
-<ul>
-    <li>item-1</li>
-    <li>item-2</li>
-    <li>item-3</li>
-</ul>
-```
-2. Unordered Lists:
-An unordered list is a list of items that are not ordered in any particular way. It is created using the <ul> tag.
-Each item in the list is represented by the <li> tag.
-The attributes used in unordered lists include:
-"type": specifies the type of bullet point used, such as circle, square, or disc.
-
-```html
-<dl>
-    <dt>Title</dt>
-    <dd>description</dd>
-</dl>
-```
-3. Descriptive Lists:
-A descriptive list is a list of items that are paired with their descriptions. It is created using the <dl> tag.
-Each item in the list is represented by the <dt> tag, and the description is represented by the <dd> tag.
-The attributes used in descriptive lists include:
-None.
-=======
 # Project
 Now lets make a resume with the help of html
 
@@ -293,9 +321,5 @@ Now lets make a resume with the help of html
 
 Above Resume will look like this on browser,
 
-![resume](../Images/resume.png)
-![resume2](../Images/resume2.png)
-
-
-
->>>>>>> 2a280ea25a3ae17df789ab997ba396fa788aa454
+![resume](./Images/resume.png)
+![resume2](./Images/resume2.png)
