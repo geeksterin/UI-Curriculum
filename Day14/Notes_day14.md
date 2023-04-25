@@ -1,13 +1,3 @@
-- [Flexbox](#flexbox)
-- [CSS Flex Items](#css-flex-items)
-- [The order Property](#the-order-property)
-- [The flex-grow Property](#the-flex-grow-property)
-- [The flex-shrink Property](#the-flex-shrink-property)
-- [The flex-basis Property](#the-flex-basis-property)
-- [The flex Property](#the-flex-property)
-- [The align-self Property](#the-align-self-property)
-- [The CSS Flexbox Items Properties](#the-css-flexbox-items-properties)
-- [TO-DO](#to-do)
 
 # Flexbox
 
