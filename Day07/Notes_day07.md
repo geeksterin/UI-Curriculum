@@ -100,7 +100,47 @@ In addition to the src and alt attributes, there are several optional attributes
 
 In this tutorial, we will learn about implementing bold text in HTML with the help of examples.
 
-We use the HTML ```<b>`` tag or the HTML ```<strong>``` tag to make text bold. For example,
+We use the HTML ```<b>``` tag or the HTML ```<strong>``` tag to make text bold. For example,
+
+```html
+<b>This text is bold.</b>
+<br>
+<strong>This text is also bold.</strong>
+```
+
+
+![bold](../Images/bold.png)
+
+### Bold v/s Strong
+
+Both ```<b> and <strong>``` tags make the text inside them bold and there is no difference in how browsers render these tags.
+
+However, the ```<strong>``` tag is a semantic tag that indicates the text content is of strong importance, seriousness, or urgency (for example, Warning! Falling rocks) whereas the ``<b>`` tag has no semantic meaning and only makes the text bold.
+
+Hence, it is generally preferred to use the HTML ```<strong> ```tag.
+
+## HTML Italic
+
+In this tutorial, we will learn about implementing italic text in HTML with the help of examples.
+
+We use the HTML ```<i> ```tag or the HTML ```<em> ```tag to make the text italic.
+
+### HTML ```<i>``` Tag
+
+The HTML ```<i>``` tag is a physical tag used to make the text italic. It is used to indicate foreign text, scientific nomenclature, thoughts, etc.
+
+```html
+<p> This text is <i>italic</i>.</p>
+```
+
+![italic](../Images/italic.png)
+
+### HTML ```<em>``` Tag
+The HTML ```<em>``` tag is a semantic tag that is used to signify that the text inside the tag is being emphasized. It is a semantic tag as opposed to ```<i>``` which doesn't hold any semantic meaning.
+
+```html
+<p> This text is <em>emphasized</em>.</p>
+```
 
 # Assignment
 - https://priyanshu-240499.github.io/Assignments-CSS/html_day2/day2.html
