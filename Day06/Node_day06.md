@@ -1,5 +1,7 @@
 # Day 01 
 
+## Introduction
+
 # What is the Internet?
 The internet is simply a network of computers that communicate with each other to send and receive data (information).
 
@@ -144,6 +146,9 @@ The main parts of our element are as follows:
 
 4. The element: The opening tag, the closing tag, and the content together comprise the element.
 
+
+# HTML Basics
+
 ## Nesting elements
 You can put elements inside other elements too — this is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word "very" in a ```<strong>``` element, which means that the word is to be strongly emphasized:
 
@@ -226,25 +231,6 @@ That wraps up the basics of individual HTML elements, but they aren't handy on t
 # Marking up text
 This section will cover some of the essential HTML elements you'll use for marking up the text.
 
-## Headings
-Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, ``<h1>`` - ``<h6>``, although you'll commonly only use 3 to 4 at most:
-
-```html
-<!-- 4 heading levels: -->
-<h1>My main title</h1>
-<h2>My top level heading</h2>
-<h3>My subheading</h3>
-<h4>My sub-subheading</h4>
-```
-```
-Note: Anything in HTML between <!-- and --> is an HTML comment. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
-```
-
-Now try adding a suitable title to your HTML page just above your ``<img>`` element.
-
-```
-Note: You'll see that your heading level 1 has an implicit style. Don't use heading elements to make text bigger or bold, because they are used for accessibility and other reasons such as SEO. Try to create a meaningful sequence of headings on your pages, without skipping levels.
-```
 
 ## Paragraphs
 As explained above, <p> elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content:
@@ -253,6 +239,110 @@ As explained above, <p> elements are for containing paragraphs of text; you'll u
 <p>This is a single paragraph</p>
 Add your sample text (you should have it from What will your website look like?) into one or a few paragraphs, placed directly below your <img> element.
 ```
+
+## Headings
+
+In this tutorial, you will learn about HTML headings, ```<h1> to <h6>```, and their implementation with the help of examples.
+
+The HTML heading tags ```(<h1> to <h6>)``` are used to add headings to a webpage. For example,
+
+```html
+<h1>This is heading 1.</h1>
+<h2>This is heading 2.</h2>
+<h3>This is heading 3.</h3>
+<h4>This is heading 4.</h4>
+<h5>This is heading 5.</h5>
+<h6>This is heading 6.</h6>
+```
+
+![headings](../Images/headings.png)
+
+In the example, we have used tags ```<h1> to <h6>``` to create headings of varying sizes and importance.
+
+The ```<h1>``` tag denotes the most important heading on a webpage. Similarly, ````<h6>```` denotes the least important heading.
+
+The difference in sizes of heading tags comes from the browser's default styling. And, you can always change the styling of heading tags, including font size, using CSS.
+
+## HTML Comments 
+
+In this tutorial, you will learn about HTML comments with the help of examples.
+The HTML comments are used to add extra information to a web page. For example,
+
+```html
+<!-- this is a HTML comment. -->
+```
+
+The HTML Comment tag (<!-- comment here -->) is used to insert text to the webpage which is not rendered by the browser.
+
+The HTML comments can be seen while reading the code but get ignored by the browser during the rendering of the page. For example,
+
+```html
+  <!-- a random comment.  -->
+  <p>HTML is fun to learn.</p>
+  ```
+### Keyboard Shortcut for HTML Comments
+
+Most code editors have a keyboard shortcut for commenting code.
+
+In general, most code editors use Ctrl + / (on Windows or Linux) and Cmd + / (on Mac) for creating comments.
+
+We encourage you to remember these shortcuts as comments are used frequently to add extra information as well as to temporarily remove certain code.
+
+# HTML Line Break
+
+In this tutorial, you will learn about the HTML Line Break with the help of examples.
+
+The HTML Line Break tag is used to apply a line break and start your text in the new line.
+
+In HTML, we use the ```<br>``` tag to create a line break. For example,
+
+```html
+<p>
+  Use the <br> br tag <br> to create line breaks in text.
+</p>
+```
+
+In the above code, if you look carefully, you can find there is no closing tag for ```<br>.``` It's because the ```<br>``` tag is an empty tag, which means it doesn't require a closing tag.
+
+As you can see, the ```<br>``` tag adds a new line without having to create a new paragraph.
+
+The line break is helpful for writing structured texts like addresses and poems without creating multiple paragraphs.
+
+## HTML Pre-Tag
+
+In this tutorial, you will learn about the HTML ```<pre>``` tag with the help of examples.
+
+The HTML Preformatted text tag,``` <pre>,``` is used to define a block of text to display them in the same manner as it is written in the HTML file.
+
+In HTML, we use the ```<pre>``` tag to create preformatted text. For example,
+
+```html
+<pre>
+  This    Text will 
+  be shown   exactly 
+      as it   is written.
+</pre>
+```
+![pre](../Images/pre.png)
+The ```<pre>``` tag preserves all new lines and white spaces. Hence, the above example shows the output exactly as it is written.
+
+## HTML Horizontal Tag
+
+In this tutorial, you will learn about the HTML ```<hr>``` tag with the help of examples.
+The HTML Horizontal rule tag, ```<hr>```, is used to insert a horizontal line between our paragraphs. For example,
+
+```html
+  <p>First Paragraph</p>
+  <hr>
+  <p>Second Paragraph</p>
+  ```
+![hori](../Images/hori.png)
+
+The ```<hr> ```tag is an empty tag, i.e. it doesn't require a closing tag.
+
+
+
+
 
 ## Lists
 A lot of the web's content is lists and HTML has special elements for these. Marking up lists always consists of at least 2 elements. The most common list types are ordered and unordered lists:
@@ -346,6 +436,8 @@ A descriptive list is a list of items that are paired with their descriptions. I
 Each item in the list is represented by the <dt> tag, and the description is represented by the <dd> tag.
 The attributes used in descriptive lists include:
 None.
+
+
 =======
 # Project
 Now lets make a resume with the help of html
