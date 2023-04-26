@@ -18,16 +18,6 @@ HTML5 (Hypertext Markup Language version 5) is the latest version of the markup 
 </header>
 ```
 
-2. Audio and Video: HTML5 added native support for audio and video playback without requiring third-party plugins like Flash. This has made it easier for developers to integrate multimedia content into their websites, and also improved the user experience by allowing seamless playback across devices and platforms.
-
-```html
-<video controls>
-  <source src="myvideo.mp4" type="video/mp4">
-  <source src="myvideo.webm" type="video/webm">
-  Your browser does not support the video tag.
-</video>
-```
-
 3. Canvas: HTML5 introduced the ```<canvas>``` element, which allows developers to create dynamic and interactive 2D and 3D graphics within a web page using JavaScript. This has enabled the creation of visually rich and engaging web applications.
 
 ```html
@@ -228,22 +218,7 @@ HTML plays a crucial role in search engine optimization (SEO) by providing a str
 <meta name="description" content="Learn about web development and how to build effective web applications.">
 ```
 
-3. Heading tags: HTML heading tags (such as <h1>, <h2>, <h3>, etc.) provide a hierarchical structure to the content of web pages. Using heading tags to organize and structure content can make it easier for search engines to understand the content of the web page and improve search rankings.
-Example:
-
-```html
-<h1>Example Page</h1>
-<h2>Introduction</h2>
-<p>This is an example of how HTML can improve search engine optimization.</p>
-<h2>Title Tags</h2>
-<p>HTML title tags provide a concise and accurate description of web pages.</p>
-```
-
-4. Image tags: HTML image tags provide a way to describe images and other multimedia content on web pages. Using relevant keywords in the image alt attribute can improve search rankings and make the web page more accessible to users with disabilities.
-
-Example:
-```html
-<img src="example-image.jpg" alt="Example of a web development project" />
+ 
 ```
 
 5. Semantic markup: HTML semantic elements (such as ```<header>, <nav>, <main>, <article>, <aside>, and <footer>```) provide a way to describe the structure and content of web pages in a more meaningful way. Using semantic markup can improve search rankings by making it easier for search engines to understand the content and purpose of different sections of the web page.
@@ -340,3 +315,73 @@ Let us look at the attributes supported by the HTML <audio> tag.
 - muted
 - src
 - preload
+
+# HTML Miscelleneous
+
+## HTML Iframes
+In this tutorial, we will learn about div iframes in HTML with the help of examples.
+
+The HTML ```<iframe>``` tag is used to embed a webpage within a webpage. It is also called an inline frame. For example,
+
+```html
+<iframe src="https://programiz.pro" title="programiz pro website" height="500" width="500" ></iframe>
+```
+
+
+![iframe](../Images/iframe.png)
+
+Here,
+
+- src: It is used to specify the URL of the website to be loaded.
+- title: It is good practice to include a title attribute so that screen readers can read the title to users.
+
+## HTML Entities
+In this tutorial, we will learn about entities in HTML with the help of examples.
+
+The HTML entities are used to display reserved characters (characters that are used in HTML code), special characters, or invisible characters. For example,
+
+```html
+<p>This is a &lt;p&gt; tag.</p> 
+```
+
+
+Here, ```&lt; and &gt;``` are the HTML entities used to display ```<and>``` respectively.
+
+If we were to use the ```<p>``` tag instead of ```&lt;p&gt;``` the browser would read it as a tag. Hence to display ```<p>``` we need to use ```&lt; and &gt;``` instead of ``<and> ``respectively.
+
+## HTML Entities Syntax
+
+HTML entities are represented by either their name or their number.
+
+Entity names
+We use &entity_name; to add reserved characters using Entity names. For example,
+```&cent;```  would be displayed as ¢
+
+## Entity number
+We use &#entity_number; to add reserved characters using Entity number. For example, ```&#162;``` would also be displayed as ¢
+
+All entity names and numbers start with an & and end with an ;.
+
+Note: Not all entities have names, only characters that are commonly used have entity names.
+
+## Special Characters
+Special characters are characters that are not available on a general keyboard like ®, ©, ¢, etc.
+We use HTML entities to add special characters to HTML documents. For example
+
+```<footer> &copy;``` 2022 Programiz. All rights reserved. ```</footer>```
+ 
+
+## Copyright Symbol Example
+Invisible Characters
+An invisible character is a character that is not visible when rendered in a document or text field. These characters can be used for various purposes, such as adding white space or formatting a document. For example,
+
+```html
+<p>Invi <span>&zwnj;</span>sible<span>&nbsp;</span>Cha<span>&zwnj;</span>racters</p>
+```
+ 
+
+Here, ```&zwnj;``` and ```&nbsp;``` are invisible characters. ```&zwnj;``` is a zero-width character whereas ```&nbsp;``` is a space character.
+
+Some examples of invisible characters are – space, tab, zero-width space, etc.
+
+ 
