@@ -280,3 +280,63 @@ Example:
 ```
 
 In this example, we have used semantic markup to describe the structure and content of the web page. We have used ```<header>``` and ```<footer>``` to define the top and bottom sections of the web page, ```<nav>``` to define a navigation menu, ```<main>``` to define the main content of the web page, and ```<article>``` to define individual sections of the content. Using semantic markup can improve search rankings by making it easier for search engines to understand the purpose and meaning of different sections of the web page.
+
+
+## HTML Video
+
+In this tutorial, we will learn about videos in HTML with the help of examples.
+
+The HTML ``<video>`` tag is used to embed a media player which supports video playback into the HTML page. We use the HTML ``<video>`` tag and the ``<source>`` tag to show the video. For example,
+
+```html
+<video width="320" height="190" controls>
+    <source src="video.mp4" type="video/mp4">
+</video>
+```
+
+In the above code,
+
+- video.mp4 - path to the video we want to display
+- video/mp4 - the type of resource we want to display
+- controls - allows user to control the video
+The video.mp4 file in the above example is located in the same directory as the HTML file.
+
+### Attributes of HTML ```<video>``` tag
+Let us look at the attributes supported by the HTML ```<video>``` tag.
+
+- autoplay
+- controls
+- height and width
+- loop
+- muted
+- src
+- preload
+
+We will learn about each of these in detail.
+
+HTML Audio
+In this tutorial, we will learn about the audio tag in HTML with the help of examples.
+
+The HTML ```<audio>``` tag is used to embed a media player which supports audio playback into the HTML page. We use the HTML ```<audio>``` tag along with the ```<source>``` tag to add the audio player. For example,
+
+```html
+<audio controls>
+  <source src="audio.mp3" type="audio/mp3">
+</audio>
+```
+
+In the above code:
+
+- audio.mp3 - path to the audio we want to display
+- audio/mp3 - the type of resource we want to display.
+The audio.mp3 file in the above example is located in the same directory as the HTML file.
+
+Attributes of HTML <audio> tag
+Let us look at the attributes supported by the HTML <audio> tag.
+
+- autoplay
+- controls
+- loop
+- muted
+- src
+- preload
