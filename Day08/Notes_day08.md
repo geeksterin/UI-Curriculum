@@ -1,4 +1,4 @@
-# Day 02 HTML
+# Day 08
 
 # The `<form>` Element
 
@@ -299,40 +299,24 @@ To create this form, we need to use the ``<legend> ``tag to defined caption, ``<
 		</label>
 	</p>
 
-<p>
-		<label>First name: <input name="firstName" /></label>
-	</p>
+<p><label>First name: <input name="firstName" /></label></p>
 
-<p>
-		<label>Last name: <input name="lastName" /></label>
-	</p>
+<p><label>Last name: <input name="lastName" /></label></p>
 
-<p>
-		Gender :
+<p>	Gender :
 		<label><input type="radio" name="gender" value="male" /> Male</label>
 		<label><input type="radio" name="gender" value="female" /> Female</label>
-	</p>
+</p>
+<p><label>Email:<input type="email" name="email" /></label></p>
 
-
-<p>
-		<label>Email:<input type="email" name="email" /></label>
-	</p>
+<p>	<label>Date of Birth:<input type="date" name="birthDate"></label></p>
 
 <p>
-		<label>Date of Birth:<input type="date" name="birthDate"></label>
-	</p>
+ <label>Address :</label><br />
+<textarea name="address" cols="30" rows="3"></textarea>		
+</p>
 
-<p>
-		<label>
-		Address :
-		<br />
-		<textarea name="address" cols="30" rows="3"></textarea>
-		</label>
-	</p>
-
-<p>
-		<button type="submit">Submit</button>
-    </p>
+<p>	<button type="submit">Submit</button></p>
 	</fieldset>
 </form>
 </body>
@@ -344,95 +328,7 @@ To create this form, we need to use the ``<legend> ``tag to defined caption, ``<
 ![form](../Images/form.png)
 
 
-# Tables in HTML 
 
-<table> element in HTML:
-
-Frame: Specifies whether to display borders around the table and its cells. Possible values are "void" (no borders), "above" (borders above the table), "below" (borders below the table), "hsides" (borders on the top and bottom of the table), "vsides" (borders on the left and right of the table), "lhs" (border on the left-hand side of the table), "rhs" (border on the right-hand side of the table), and "box" (borders on all sides of the table). Example: ```<table frame="hsides">.```
-
-Rules: Specifies which parts of the table have borders. Possible values are "none" (no borders), "groups" (borders around groups of rows or columns), "rows" (borders between each row), and "cols" (borders between each column). Example: ```<table rules="rows">.```
-
-Border: Specifies the width of the border(s) around the table and its cells. Example: ```<table border="1">.```
-
-Cellpadding: Specifies the amount of space between the cell content and the cell border. Example:```` <table cellpadding="10">.````
-
-Cellspacing: Specifies the amount of space between cells. Example: ```<table cellspacing="5">.```
-
-Colspan: Specifies the number of columns a cell should span. Example: ```<td colspan="2">.```
-
-Rowspan: Specifies the number of rows a cell should span. Example: ```<td rowspan="3">.```
-
-These attributes can be used individually or in combination to customize the appearance of tables in HTML.
-
-![Tables](../Images/table.gif)
-
-
-```html
-<!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="utf-8">
-            <meta name="description" content="">
-            <meta name="keywords" content="">
-            <title>Table Practice</title>
-        </head>
-        <body>
-            <table border="1" align="center" cellpadding="10px">
-                <thead>
-                    <tr>
-                        <th rowspan="3">Day</th>
-                        <th colspan="3">Seminar</th>
-                    </tr>
-                    <tr>
-                        <th colspan="2">Schedule</th>
-                        <th rowspan="2">Topic</th>
-                    </tr>
-                    <tr>
-                        <th>Begin</th>
-                        <th>End</th>
-                    </tr>
-                </thead>
-        
-                <tbody>
-                    <tr>
-                        <td rowspan="2">Monday</td>
-                        <td rowspan="2">8:00 a.m</td>
-                        <td rowspan="2">5:00 p.m</td>
-                        <td>Introduction to XML</td>
-                    </tr>
-                    <tr>
-                        <td>Validity: DTD and Relax NG</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="4">Tuesday</td>
-                        <td>8:00 a.m</td>
-                        <td>11:00 a.m</td>
-                        <td rowspan="2">XPath</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">11:00 a.m</td>
-                        <td rowspan="2">2:00 p.m</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">XSL transformation</td>
-                    </tr>
-                    <tr>
-                        <td>2:00 p.m</td>
-                        <td>5:00 p.m</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>8:00 a.m</td>
-                        <td>12:00 p.m</td>
-                        <td>XLS Formatting Objects</td>
-                    </tr>
-        
-                </tbody>
-            </table>
-        
-        </body>
-        </html>
-        ```
 
 
 # TO-DO

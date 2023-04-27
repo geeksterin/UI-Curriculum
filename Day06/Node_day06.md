@@ -1,6 +1,6 @@
-# Day 01 
+# Day 06
 
-## Introduction
+## Web-Introduction
 
 # What is the Internet?
 The internet is simply a network of computers that communicate with each other to send and receive data (information).
@@ -132,7 +132,7 @@ If we wanted the line to stand by itself, we could specify that it is a paragrap
 
 ![HTML Tree](../Images/tree.gif)
 
-## Anatomy of an HTML element
+## Hierarchy
 
 ![Anatomy](../Images/grumpy-cat-small.png)
 
@@ -186,47 +186,6 @@ An attribute should always have the following:
 
 2. The attribute name followed by an equal sign.
 3. The attribute value wrapped by opening and closing quotation marks.
-
-# Anatomy of an HTML document
-That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our index.html example (which we first met in the Dealing with files article):
-
-```html
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>My test page</title>
-  </head>
-  <body>
-    <h1>This is a first level heading in HTML.</h1>
-  <h2>This is a second level heading in HTML.</h2>
-  <h3>This is a third level heading in HTML.</h3>
-  <p>This is a <em>paragragh</em> As you can see, I placed an empahisis on the word "paragraph".</p>
-  <p>The main essence of this tutorial is to:</p>
-    <ul>
-       <li>Show you how to format a web document with HTML</li>
-       <li>Show you how to design a web page with CSS</li>
-       <li>Show you how to program a web document with JavaScript</li>
-    </ul>
-  </body>
-</html>
-```
-
-![index](../Images/index.png)
-
-**Here We have the following:**
-
-1. ```<!DOCTYPE html>``` — doctype. It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.
-
-2. ```<html></html>``` — the ```<html>``` element. This element wraps all the content on the entire page and is sometimes known as the root element. It also includes the lang attribute, setting the primary language of the document.
-
-3. ```<head></head>``` — the ```<head>``` element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
-
-4. ```<meta charset="utf-8">``` — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this and it can help avoid some problems later on.
-5. ```<meta name="viewport" content="width=device-width">``` — This viewport element ensures the page renders at the width of viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down.
-6. ```<title></title>``` — the ```<title>``` element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.
-7. ``<body></body>`` — the ``<body>`` element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
 
 # Marking up text
 This section will cover some of the essential HTML elements you'll use for marking up the text.
@@ -324,9 +283,10 @@ In HTML, we use the ```<pre>``` tag to create preformatted text. For example,
 </pre>
 ```
 ![pre](../Images/pre.png)
+
 The ```<pre>``` tag preserves all new lines and white spaces. Hence, the above example shows the output exactly as it is written.
 
-## HTML Horizontal Tag
+## HTML Horizontal Rule
 
 In this tutorial, you will learn about the HTML ```<hr>``` tag with the help of examples.
 The HTML Horizontal rule tag, ```<hr>```, is used to insert a horizontal line between our paragraphs. For example,
@@ -339,39 +299,6 @@ The HTML Horizontal rule tag, ```<hr>```, is used to insert a horizontal line be
 ![hori](../Images/hori.png)
 
 The ```<hr> ```tag is an empty tag, i.e. it doesn't require a closing tag.
-
-
-
-
-
-## Lists
-A lot of the web's content is lists and HTML has special elements for these. Marking up lists always consists of at least 2 elements. The most common list types are ordered and unordered lists:
-
-1. Unordered lists are for lists where the order of the items doesn't matter, such as a shopping list. These are wrapped in a ``<ul>`` element.
-
-2. Ordered lists are for lists where the order of the items does matter, such as a recipe. These are wrapped in an ``<ol>`` element.
-
-Each item inside the lists is put inside an ``<li> ``(list item) element.
-
-For example, if we wanted to turn the part of the following paragraph fragment into a list
-
-```html
-<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
-```
-We could modify the markup to this
-
-```html
-<p>At Mozilla, we're a global community of</p>
-
-<ul>
-  <li>technologists</li>
-  <li>thinkers</li>
-  <li>builders</li>
-</ul>
-
-<p>working together… </p>
-```
-Try adding an ordered or unordered list to your example page.
 
 # Links
 Links are very important — they are what makes the web a web! To add a link, we need to use a simple element — ``<a>`` — "a" being the short form for "anchor". To make text within your paragraph into a link, follow these steps:
@@ -395,7 +322,7 @@ Fill in the value of this attribute with the web address that you want the link 
 You might get unexpected results if you omit the https:// or http:// part, called the protocol, at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
 
 # List
-In HTML, there are three types of lists: ordered lists, unordered lists, and descriptive lists. Here's a brief explanation of each type and their attributes:
+A lot of the web's content is lists and HTML has special elements for these. Marking up lists always consists of at least 2 elements.In HTML, there are three types of lists: ordered lists, unordered lists, and descriptive lists.Below is an overview for the same 
 
 Ordered Lists:
 ```html
@@ -405,8 +332,8 @@ Ordered Lists:
     <li>item-3</li>
 </ol>
 ```
-1. An ordered list is a list of items that are ordered numerically or alphabetically. It is created using the <ol> tag.
-Each item in the list is represented by the <li> tag.
+1. An ordered list is a list of items that are ordered numerically or alphabetically. It is created using the ``<ol>`` tag.
+Each item in the list is represented by the ``<li>`` tag.
 The attributes used in ordered lists include:
 "start": specifies the starting number of the list.
 "type": specifies the type of numbering used, such as decimal, uppercase letters, or lowercase Roman numerals.
@@ -420,8 +347,8 @@ The attributes used in ordered lists include:
 </ul>
 ```
 2. Unordered Lists:
-An unordered list is a list of items that are not ordered in any particular way. It is created using the <ul> tag.
-Each item in the list is represented by the <li> tag.
+An unordered list is a list of items that are not ordered in any particular way. It is created using the ``<ul>`` tag.
+Each item in the list is represented by the ``<li>`` tag.
 The attributes used in unordered lists include:
 "type": specifies the type of bullet point used, such as circle, square, or disc.
 
@@ -445,53 +372,92 @@ Now lets make a resume with the help of html
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bittoo Aggarwal</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
     <h1>Bittoo Aggarwal</h1>
     <p>Software Developer, Educator at Geekster</p>
     <a href="https://www.linkedin.com/in/bittoo-aggarwal/">Linkedin</a>
     <a href="https://github.com/bitz1119">Github</a>
-    <hr>
+    <hr />
     <h2>Experience</h2>
-    <h3> Software developer at Amazon</h3>
-    <p>I work with amazon in transportation team, some more description Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, ullam! Maxime officiis consequuntur libero eaque reprehenderit quisquam nam ab vitae totam id commodi laborum enim, sint ea odit quasi soluta!
-        <br>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident iusto ut praesentium modi. Incidunt atque voluptatem, dignissimos officiis reprehenderit est!
+    <h3>Software developer at Amazon</h3>
+    <p>
+      I work with amazon in transportation team, some more description Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Possimus, ullam! Maxime
+      officiis consequuntur libero eaque reprehenderit quisquam nam ab vitae
+      totam id commodi laborum enim, sint ea odit quasi soluta!
+      <br />
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident iusto
+      ut praesentium modi. Incidunt atque voluptatem, dignissimos officiis
+      reprehenderit est!
     </p>
-    <hr>
+    <hr />
 
-    <h3> Educator at Geekster</h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora cum inventore aliquam, nulla eos dignissimos ipsum voluptas id, dolores suscipit totam nostrum perferendis alias, expedita quaerat distinctio asperiores! Nobis, aliquid.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsa ab qui autem nesciunt vel consequatur non totam, temporibus excepturi voluptatem iure impedit ut repellendus earum necessitatibus nemo eligendi, animi debitis reiciendis suscipit. Unde iure obcaecati dolores, numquam quibusdam rerum facilis a quam quos ad ullam consectetur reiciendis deserunt similique.
+    <h3>Educator at Geekster</h3>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora cum
+      inventore aliquam, nulla eos dignissimos ipsum voluptas id, dolores
+      suscipit totam nostrum perferendis alias, expedita quaerat distinctio
+      asperiores! Nobis, aliquid. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Facere ipsa ab qui autem nesciunt vel consequatur non
+      totam, temporibus excepturi voluptatem iure impedit ut repellendus earum
+      necessitatibus nemo eligendi, animi debitis reiciendis suscipit. Unde iure
+      obcaecati dolores, numquam quibusdam rerum facilis a quam quos ad ullam
+      consectetur reiciendis deserunt similique.
     </p>
-    <hr>
+    <hr />
 
     <h2>Skills</h2>
     <!-- how to comment -->
     <!-- I want to add skills list -->
     <ul>
-        <li>Java</li>
-        <li>JavaScript</li>
-        <li>Testing</li>
-        <li>API Designing</li>
-        <li>System Design</li>
+      <li>Java</li>
+      <li>JavaScript</li>
+      <li>Testing</li>
+      <li>API Designing</li>
+      <li>System Design</li>
     </ul>
 
-    <hr>
+    <hr />
     <h2>Hobbies</h2>
     <ol>
-        <li>Table Tennis</li>
-        <li>Reading Books</li>
-        <li>Biography</li>
-        <li>Teaching</li>
+      <li>Table Tennis</li>
+      <li>Reading Books</li>
+      <li>Biography</li>
+      <li>Teaching</li>
     </ol>
+    <hr />
+    <h2>Projects</h2>
+    <dl>
+      <dt>Project-1</dt>
+      <dd>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, provident?
+        Voluptatem quos dignissimos velit quia, assumenda molestiae hic,
+        maiores, corporis a tempore perferendis repellendus quod modi non quo
+        ipsam laboriosam consectetur voluptates quibusdam facilis nisi unde
+        libero? Pariatur, recusandae aspernatur.
+      </dd>
+      <dt>Project-2</dt>
+      <dd>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, provident?
+        Voluptatem quos dignissimos velit quia, assumenda molestiae hic,
+        maiores, corporis a tempore perferendis repellendus quod modi non quo
+        ipsam laboriosam consectetur voluptates quibusdam facilis nisi unde
+        libero? Pariatur, recusandae aspernatur.
+      </dd>
+    </dl>
     <hr>
-</body>
+    <pre>
+        Contact Details 
+        Email:abc@gamil.com 
+        Mobile no. :8448xxxx18
+    </pre>
+  </body>
 </html>
 ```
 
